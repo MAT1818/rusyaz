@@ -1,1 +1,1 @@
-Upload all files in this folder (index.html, sw.js, manifest.webmanifest, *.png) to GitHub Pages / Netlify. Do not rename them.
+
