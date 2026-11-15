@@ -22,10 +22,62 @@
 =====================================================================
 -->
 
-<meta name="app-version" content="2.1.0">
+<meta name="app-version" content="2.2.0">
 <script id="app-changelog">
 /* Language order for every text array: [en, fa, fr, ar, vi, zh, pt, es, tr] */
 const APP_CHANGELOG=[
+{
+"v": "2.2.0",
+"d": "2026-11-15",
+"tabs": [
+0,
+60
+],
+"items": [
+[
+"🔍",
+[
+"Tap a word in the case examples or stories → a «?» button pops up → see WHY the word looks like this: dictionary form, case + role, gender, singular/plural",
+"روی هر کلمه در مثال‌های پادژ یا داستان‌ها بزن ← دکمه‌ی «؟» ظاهر می‌شود ← ببین چرا کلمه این شکل را دارد: شکل اصلی، پادژ و نقش، جنسیت، مفرد/جمع",
+"Touchez un mot dans les exemples de cas ou les histoires → un bouton « ? » apparaît → voyez POURQUOI le mot a cette forme : forme du dictionnaire, cas + rôle, genre, singulier/pluriel",
+"المس أي كلمة في أمثلة الحالات أو القصص ← يظهر زر «؟» ← اعرف لماذا اتخذت الكلمة هذا الشكل: الصيغة الأصلية والحالة والدور والجنس والمفرد/الجمع",
+"Chạm vào một từ trong ví dụ về cách hoặc truyện → hiện nút «?» → xem VÌ SAO từ có dạng này: dạng gốc, cách + vai trò, giống, số ít/nhiều",
+"在格的例句或故事里点一个单词 → 弹出“？”按钮 → 看看这个词为什么是这个形式：原形、格与作用、性、单复数",
+"Toque numa palavra nos exemplos de casos ou nas histórias → aparece um botão «?» → veja POR QUE a palavra tem esta forma: forma de dicionário, caso + função, gênero, singular/plural",
+"Toca una palabra en los ejemplos de casos o en los cuentos → aparece un botón «?» → mira POR QUÉ la palabra tiene esta forma: forma de diccionario, caso + función, género, singular/plural",
+"Hâl örneklerinde veya hikâyelerde bir kelimeye dokun → «?» düğmesi çıkar → kelimenin NEDEN bu biçimde olduğunu gör: sözlük biçimi, hâl + görev, cinsiyet, tekil/çoğul"
+]
+],
+[
+"💡",
+[
+"Short tips for tricky spots: animate accusative, fleeting vowels, «у меня есть», plural-only nouns…",
+"نکته‌های کوتاه برای جاهای سخت: مفعولی جاندار، مصوت فرار، «у меня есть»، اسم‌های فقط‌جمع…",
+"Petits conseils pour les points délicats : accusatif animé, voyelles fugitives, « у меня есть », noms pluriels…",
+"ملاحظات قصيرة للمواضع الصعبة: المنصوب للحي، الحرف المتحرك، «у меня есть»، الأسماء الجمعية…",
+"Mẹo ngắn cho chỗ khó: đối cách của danh từ hoạt động, nguyên âm chạy, «у меня есть», danh từ chỉ số nhiều…",
+"疑难点小提示：有生命名词宾格、流动元音、“у меня есть”、只有复数的名词……",
+"Dicas curtas para pontos difíceis: acusativo animado, vogais fugitivas, «у меня есть», nomes só no plural…",
+"Consejos breves para puntos difíciles: acusativo animado, vocales fugaces, «у меня есть», nombres solo plurales…",
+"Zor yerler için kısa notlar: canlı belirtme hâli, kaçan ünlüler, «у меня есть», hep çoğul isimler…"
+]
+],
+[
+"🌐",
+[
+"All explanations in 9 languages",
+"همه‌ی توضیحات به ۹ زبان",
+"Toutes les explications en 9 langues",
+"جميع الشروح بـ 9 لغات",
+"Mọi giải thích bằng 9 ngôn ngữ",
+"所有讲解均支持9种语言",
+"Todas as explicações em 9 idiomas",
+"Todas las explicaciones en 9 idiomas",
+"Tüm açıklamalar 9 dilde"
+]
+]
+]
+},
 {
 "v": "2.1.0",
 "d": "2026-11-14",
@@ -501,6 +553,55 @@ td.ef{position:relative}
 .bd-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}.bd-chip{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:99px;padding:4px 10px;font-size:.78rem;cursor:pointer}.bd-chip.on{background:#7c3aed;color:#fff;border-color:#7c3aed}
 .bd-it.on{outline:2px solid #7c3aed;outline-offset:-2px;background:color-mix(in srgb,#7c3aed 14%,var(--card))}
 #dsk{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;padding:6px 10px;font-size:1.05rem;line-height:1;cursor:pointer;margin-inline-end:6px;flex:none}#dsk.on{background:#7c3aed;color:#fff;border-color:#7c3aed}
+/* word-form helper */
+.wd{cursor:pointer;border-radius:5px;padding:0 1px;margin:0 -1px;border-bottom:2px dotted color-mix(in srgb,var(--c2) 55%,transparent);transition:background .15s,border-color .15s}
+.wd:hover{background:color-mix(in srgb,var(--c2) 14%,transparent)}
+.wd.on{background:color-mix(in srgb,var(--wc,var(--c2)) 22%,transparent);border-bottom-color:var(--wc,var(--c2));border-bottom-style:solid}
+.wq-bub{position:absolute;z-index:9998;width:36px;height:36px;border-radius:50%;border:2px solid #fff;color:#fff;font:800 20px/1 system-ui,sans-serif;cursor:pointer;padding:0;
+ background:radial-gradient(circle at 30% 25%,color-mix(in srgb,var(--wc) 55%,#fff),var(--wc) 55%,color-mix(in srgb,var(--wc) 60%,#3b1d8f));
+ box-shadow:0 6px 16px color-mix(in srgb,var(--wc) 55%,transparent),0 2px 4px rgba(0,0,0,.25);
+ animation:wqpop .38s cubic-bezier(.2,1.6,.4,1) both,wqbob 1.6s ease-in-out .4s infinite;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.wq-bub::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--wc);opacity:0;animation:wqring 1.6s ease-out .4s infinite;pointer-events:none}
+.wq-bub::after{content:"";position:absolute;left:50%;bottom:-7px;margin-left:-5px;border:5px solid transparent;border-top:7px solid #fff;border-bottom:0;pointer-events:none}
+.wq-bub:hover{transform:scale(1.12) rotate(-6deg)}
+@keyframes wqpop{from{transform:scale(0) translateY(14px);opacity:0}to{transform:none;opacity:1}}
+@keyframes wqbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes wqring{0%{transform:scale(.8);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.wq-card{position:absolute;z-index:9999;width:min(340px,calc(100vw - 16px));background:var(--card);color:var(--tx);border-radius:18px;border:1px solid var(--bd);
+ box-shadow:0 18px 48px rgba(10,20,50,.35),0 0 0 3px color-mix(in srgb,var(--wc) 28%,transparent);animation:wqcard .28s cubic-bezier(.2,1.3,.4,1) both;transform-origin:50% 100%;font-size:.9rem;line-height:1.45}
+.wq-card.below{transform-origin:50% 0}
+@keyframes wqcard{from{transform:scale(.7) translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.wq-tail{position:absolute;bottom:-9px;width:18px;height:18px;margin-left:-9px;background:var(--card);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd);transform:rotate(45deg);box-shadow:3px 3px 4px rgba(10,20,50,.12)}
+.wq-card.below .wq-tail{bottom:auto;top:-9px;border:0;border-left:1px solid var(--bd);border-top:1px solid var(--bd);box-shadow:none;background:var(--wc)}
+.wq-head{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:17px 17px 0 0;color:#fff;background:linear-gradient(120deg,var(--wc),color-mix(in srgb,var(--wc) 55%,#2a1a6e))}
+.wq-w{font-size:1.35rem;font-weight:800;letter-spacing:.2px;flex:1;min-width:0;overflow-wrap:anywhere}
+.wq-pos{font-size:.7rem;font-weight:700;background:rgba(255,255,255,.22);border-radius:99px;padding:2px 9px;white-space:nowrap}
+.wq-x{border:0;background:rgba(255,255,255,.2);color:#fff;width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:.8rem;line-height:1;padding:0}
+.wq-x:hover{background:rgba(255,255,255,.38)}
+.wq-body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:9px;max-height:min(68vh,540px);overflow:auto}
+.wq-lem{display:flex;align-items:center;gap:7px;flex-wrap:wrap;background:color-mix(in srgb,var(--wc) 9%,var(--card));border:1px dashed color-mix(in srgb,var(--wc) 60%,transparent);border-radius:12px;padding:7px 10px}
+.wq-l{font-size:.68rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.4px;width:100%}
+.wq-lw{font-size:1.15rem;color:var(--wc)}
+.wq-arrow{color:var(--mu);font-weight:800}
+.wq-same{font-weight:700;color:#16a34a}
+.wq-sp{border:0;background:var(--wc);color:#fff;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:.8rem;padding:0}
+.wq-facts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.wq-f{background:var(--bg);border:1px solid var(--bd);border-radius:11px;padding:6px 9px;display:flex;flex-direction:column;gap:1px;min-width:0}
+.wq-f:first-child:nth-last-child(odd){grid-column:1/-1}
+.wq-fl{font-size:.64rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.4px}
+.wq-fv{font-weight:700;overflow-wrap:anywhere}
+.wq-fv i{font-style:normal;font-weight:400;color:var(--mu);font-size:.8rem}
+.wq-num{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:50%;color:#fff;font-size:.78rem;margin-inline-end:3px}
+.wq-ic{opacity:.8}
+.wq-role{background:color-mix(in srgb,var(--wc) 8%,var(--card));border-inline-start:4px solid var(--wc);border-radius:10px;padding:7px 10px}
+.wq-role>div{font-weight:600}
+.wq-pm{margin-top:4px;font-size:.8rem;color:var(--mu);font-weight:500}
+.wq-pm b{color:var(--wc)}
+.wq-note{display:flex;gap:8px;background:#fff8e1;color:#5c4400;border:1px solid #f3d98a;border-radius:12px;padding:8px 10px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .wq-note{background:#3a3010;color:#f6e3a1;border-color:#6b5a1e}}
+.wq-note p{margin:3px 0 0;font-size:.84rem}
+.wq-bulb{font-size:1.15rem}
+@media(prefers-reduced-motion:reduce){.wq-bub,.wq-bub::before,.wq-card{animation:none}}
 </style></head><body class='intro'><div id='splash'><img id='slogo' alt='MADI'><div class='sbar'><i></i></div><div id='stext'><div class='st1'>Для студентов подготовительного факультета МАДИ</div><div class='st2'>For students of the MADI preparatory faculty</div></div></div>
 <header><div class="top"><div><h1 id="t"></h1><p id="s"></p></div>
 <div id='gs'><input id='gq' type='search' autocomplete='off' aria-label='Search'><div id='gres' hidden></div></div><button id="dsk" type="button" aria-label="Desktop view" title="Desktop view" hidden>🖥️</button><select id="lg" aria-label="Language"></select></div></header>
@@ -2718,6 +2819,419 @@ function dots(){const nv=document.getElementById('nav');if(!nv||!CL.tabs)return;
 nv.querySelectorAll('.wn-dot').forEach(x=>x.remove());
 CL.tabs.forEach(id=>{if(ss.includes(key(id)))return;const b=nv.querySelector('[data-i="'+id+'"]');if(!b)return;b.insertAdjacentHTML('beforeend','<i class="wn-dot"></i>');const g=b.closest('.fg'),h=g&&g.querySelector('.fh');if(h&&!h.querySelector('.wn-dot'))h.insertAdjacentHTML('beforeend','<i class="wn-dot"></i>')})}
 const _nav=window.nav;window.nav=function(){_nav.apply(this,arguments);dots()};dots();
+})();
+</script>
+<script id="wq-feature">
+const WQ_SENT={"Привет! Меня зовут Али.":"привет/I я/Rxs4 звать/Vi.pr3p -","Привет, Али! А меня зовут Анна.":"привет/I - а/C я/Rxs4 звать/Vi.pr3p -","Я студент. Я из Ирана. А ты откуда?":"я/Rxs1 студент/Nms1!nobe я/Rxs1 из/Pr2 Иран/Nms2 а/C ты/Rxs1 откуда/D","Я из Москвы. Очень приятно!":"я/Rxs1 из/Pr2 Москва/Nfs2 очень/D приятно/D","Это моя семья.":"это/Rns1!eto мой/Afs1!poss семья/Nfs1=pred","Это мама, а это папа.":"это/Rns1!eto мама/Nfs1=pred а/C это/Rns1!eto папа/Nms1!amasc=pred","У меня есть брат и сестра.":"у/Pr2!uhave я/Rxs2 быть/Vi.pr3s брат/Nms1=thing и/C сестра/Nfs1=thing","Мой брат учится в школе.":"мой/Ams1!poss брат/Nms1 учиться/Vi.pr3s!refl в/Pr6 школа/Nfs6","Я в магазине.":"я/Rxs1!nobe в/Pr6 магазин/Nms6","Мне нужны хлеб и молоко.":"я/Rxs3=exp нужный/As.p!short хлеб/Nms1=thing и/C молоко/Nns1=thing","Сколько стоит хлеб?":"сколько/D стоить/Vi.pr3s хлеб/Nms1","Хлеб стоит сорок рублей. Спасибо!":"хлеб/Nms1 стоить/Vi.pr3s сорок/Mxs4 рубль/Nmp2!gq=quant -","Здравствуйте! Мне чай и пирожок, пожалуйста.":"здравствуйте/I я/Rxs3=exp чай/Nms4=do и/C пирожок/Nms4=do пожалуйста/T","Вам с сахаром?":"вы/Rxp3=exp с/Pr5 сахар/Nms5","Нет, без сахара.":"нет/T без/Pr2 сахар/Nms2","Сколько с меня? — Сто рублей.":"сколько/D с/Pr2 я/Rxs2 сто/Mxs1 рубль/Nmp2!gq=quant","Утром я пью чай и иду в университет.":"утром/D я/Rxs1 пить/Vi.pr1s чай/Nms4 и/C идти/Vi.pr1s!motion в/Pr4 университет/Nms4","Днём я учусь.":"днём/D я/Rxs1 учиться/Vi.pr1s!refl","Вечером я дома и читаю книгу.":"вечером/D я/Rxs1 дома/D и/C читать/Vi.pr1s книга/Nfs4","Ночью я сплю.":"ночью/D я/Rxs1 спать/Vi.pr1s","Извините, где здесь метро?":"извинить/Vp.im2p где/D здесь/D метро/Nns1!ind","Идите прямо, потом налево.":"идти/Vi.im2p!motion прямо/D потом/D налево/D","Метро рядом с банком.":"метро/Nns1!ind рядом/D с/Pr5 банк/Nms5","Это далеко?":"это/Rns1!eto далеко/D","Нет, это близко. Пять минут пешком.":"нет/T это/Rns1!eto близко/D пять/Mxs1 минута/Nfp2!gq=quant пешком/D","Сегодня очень холодно, идёт снег.":"сегодня/D очень/D холодно/D идти/Vi.pr3s снег/Nms1","Я надеваю тёплую куртку и шапку.":"я/Rxs1 надевать/Vi.pr1s тёплый/Afs4 куртка/Nfs4 и/C шапка/Nfs4","Мой друг не любит зиму.":"мой/Ams1!poss друг/Nms1 не/T любить/Vi.pr3s зима/Nfs4","Он говорит: «Зимой я сижу дома и пью горячий чай».":"он/Rms1 говорить/Vi.pr3s зимой/D я/Rxs1 сидеть/Vi.pr1s дома/D и/C пить/Vi.pr1s горячий/Ams4 чай/Nms4","Завтра будет тепло, и я иду гулять.":"завтра/D быть/Vi.fu3s тепло/D и/C я/Rxs1 идти/Vi.pr1s!motion гулять/Vi.inf","Мне плохо, у меня болит голова.":"я/Rxs3=exp плохо/D у/Pr2!uhave я/Rxs2 болеть/Vi.pr3s голова/Nfs1","Врач спрашивает: «Какая у вас температура?»":"врач/Nms1 спрашивать/Vi.pr3s какой/Afs1 у/Pr2 вы/Rxp2 температура/Nfs1","У меня тридцать восемь.":"у/Pr2!uhave я/Rxs2 тридцать/Mxs1 восемь/Mxs1","Врач говорит: «Вам нужно лежать дома и пить много воды».":"врач/Nms1 говорить/Vi.pr3s вы/Rxp3=exp нужно/D лежать/Vi.inf дома/D и/C пить/Vi.inf много/D вода/Nfs2=quant","Я беру лекарство в аптеке.":"я/Rxs1 брать/Vi.pr1s лекарство/Nns4 в/Pr6 аптека/Nfs6","Я ищу комнату.":"я/Rxs1 искать/Vi.pr1s комната/Nfs4","В общежитии есть свободная комната.":"в/Pr6 общежитие/Nns6 быть/Vi.pr3s свободный/Afs1 комната/Nfs1=thing","Комната маленькая, но тёплая.":"комната/Nfs1 маленький/Afs1 но/C тёплый/Afs1","В комнате есть кровать, стол и шкаф.":"в/Pr6 комната/Nfs6 быть/Vi.pr3s кровать/Nfs1=thing стол/Nms1=thing и/C шкаф/Nms1=thing","Я плачу за комнату каждый месяц.":"я/Rxs1 платить/Vi.pr1s за/Pr4 комната/Nfs4 каждый/Ams4 месяц/Nms4=time","Я хочу купить билет в Санкт-Петербург.":"я/Rxs1 хотеть/Vi.pr1s купить/Vp.inf билет/Nms4 в/Pr4 Санкт-Петербург/Nms4","Когда отправляется поезд?":"когда/D отправляться/Vi.pr3s!refl поезд/Nms1","Поезд отправляется в десять вечера.":"поезд/Nms1 отправляться/Vi.pr3s!refl в/Pr4 десять/Mxs4 вечер/Nms2","Сколько стоит билет? — Две тысячи рублей.":"сколько/D стоить/Vi.pr3s билет/Nms1 два/Mfs1!num тысяча/Nfs2!gq=quant рубль/Nmp2!gq=quant","Я беру один билет и плачу картой.":"я/Rxs1 брать/Vi.pr1s один/Mms4 билет/Nms4 и/C платить/Vi.pr1s карта/Nfs5=tool","Вчера у Али был первый день в университете.":"вчера/D у/Pr2!uhave - быть/Vi.pam первый/Ams1 день/Nms1 в/Pr6 университет/Nms6","Он пришёл в аудиторию в восемь тридцать.":"он/Rms1 прийти/Vp.pam в/Pr4 аудитория/Nfs4 в/Pr4 восемь/Mxs4 тридцать/Mxs4","Преподаватель рассказал о расписании и занятиях.":"преподаватель/Nms1 рассказать/Vp.pam о/Pr6 расписание/Nns6 и/C занятие/Nnp6","Лекции начинаются в девять часов.":"лекция/Nfp1 начинаться/Vi.pr3p!refl в/Pr4 девять/Mxs4 час/Nmp2!gq=quant","После лекции студенты пошли в столовую.":"после/Pr2 лекция/Nfs2 студент/Nmp1 пойти/Vp.pap в/Pr4 столовая/Nfs4!adjn","Там Али познакомился с новыми друзьями.":"там/D - познакомиться/Vp.pam с/Pr5 новый/Amp5 друг/Nmp5","Омар хочет открыть счёт в банке.":"- хотеть/Vi.pr3s открыть/Vp.inf счёт/Nms4 в/Pr6 банк/Nms6","Он пришёл в банк с паспортом.":"он/Rms1 прийти/Vp.pam в/Pr4 банк/Nms4 с/Pr5 паспорт/Nms5","Сотрудник попросил заполнить анкету.":"сотрудник/Nms1 попросить/Vp.pam заполнить/Vp.inf анкета/Nfs4","Через двадцать минут Омар получил банковскую карту.":"через/Pr4 двадцать/Mxs4 минута/Nfp2!gq=quant - получить/Vp.pam банковский/Afs4 карта/Nfs4","Теперь он может платить телефоном в магазине.":"теперь/D он/Rms1 мочь/Vi.pr3s платить/Vi.inf телефон/Nms5=tool в/Pr6 магазин/Nms6","Деньги можно положить на счёт в банкомате.":"деньги/Nfp4!plt=do можно/D положить/Vp.inf на/Pr4 счёт/Nms4 в/Pr6 банкомат/Nms6","Мария получила извещение о посылке.":"- получить/Vp.paf извещение/Nns4 о/Pr6 посылка/Nfs6","Она пошла на почту после занятий.":"она/Rfs1 пойти/Vp.paf на/Pr4 почта/Nfs4 после/Pr2 занятие/Nnp2","Сотрудница попросила показать паспорт.":"сотрудница/Nfs1 попросить/Vp.paf показать/Vp.inf паспорт/Nms4","Посылка была тяжёлой, потому что в ней были книги.":"посылка/Nfs1 быть/Vi.paf тяжёлый/Afs5=predins потому/D что/C в/Pr6 она/Rfs6!nin быть/Vi.pap книга/Nfp1=thing","Мария заплатила и взяла посылку.":"- заплатить/Vp.paf и/C взять/Vp.paf посылка/Nfs4","Дома она открыла её и обрадовалась.":"дома/D она/Rfs1 открыть/Vp.paf она/Rfs4 и/C обрадоваться/Vp.paf!refl","В воскресенье погода была хорошая.":"в/Pr4 воскресенье/Nns4=time погода/Nfs1 быть/Vi.paf хороший/Afs1","Мы с друзьями поехали в парк.":"мы/Rxp1 с/Pr5 друг/Nmp5 поехать/Vp.pap в/Pr4 парк/Nms4","Сначала мы гуляли и фотографировались.":"сначала/D мы/Rxp1 гулять/Vi.pap и/C фотографироваться/Vi.pap!refl","Потом мы играли в футбол.":"потом/D мы/Rxp1 играть/Vi.pap в/Pr4 футбол/Nms4","Когда стало холодно, мы пошли в кафе.":"когда/C стать/Vp.pan холодно/D мы/Rxp1 пойти/Vp.pap в/Pr4 кафе/Nns4!ind","Вечером мы вернулись домой усталые, но счастливые.":"вечером/D мы/Rxp1 вернуться/Vp.pap!refl домой/D усталый/Amp1 но/C счастливый/Amp1","Али хочет найти работу на неполный день.":"- хотеть/Vi.pr3s найти/Vp.inf работа/Nfs4 на/Pr4 неполный/Ams4 день/Nms4","Он увидел объявление в интернете и позвонил.":"он/Rms1 увидеть/Vp.pam объявление/Nns4 в/Pr6 интернет/Nms6 и/C позвонить/Vp.pam","Менеджер пригласил его на собеседование.":"менеджер/Nms1 пригласить/Vp.pam он/Rms4 на/Pr4 собеседование/Nns4","На собеседовании Али рассказал о себе и об учёбе.":"на/Pr6 собеседование/Nns6 - рассказать/Vp.pam о/Pr6 себя/Rxs6 и/C о/Pr6 учёба/Nfs6","Менеджер спросил, когда он может начать.":"менеджер/Nms1 спросить/Vp.pam когда/C он/Rms1 мочь/Vi.pr3s начать/Vp.inf","Али ответил, что может работать после лекций.":"- ответить/Vp.pam что/C мочь/Vi.pr3s работать/Vi.inf после/Pr2 лекция/Nfp2!gpl","В комнате Али сломался кран, и вода текла весь день.":"в/Pr6 комната/Nfs6 - сломаться/Vp.pam!refl кран/Nms1 и/C вода/Nfs1 течь/Vi.paf весь/Ams4 день/Nms4=time","Он позвонил коменданту, но тот не ответил.":"он/Rms1 позвонить/Vp.pam комендант/Nms3=io но/C тот/Rms1 не/T ответить/Vp.pam","Тогда Али сам пошёл к нему в офис.":"тогда/D - сам/Rms1 пойти/Vp.pam к/Pr3 он/Rms3!nin в/Pr4 офис/Nms4","Комендант сказал, что мастер придёт завтра утром.":"комендант/Nms1 сказать/Vp.pam что/C мастер/Nms1 прийти/Vp.fu3s завтра/D утром/D","Если мастер не придёт, Али придётся позвонить ещё раз.":"если/C мастер/Nms1 не/T прийти/Vp.fu3s - прийтись/Vp.fu3s!impers позвонить/Vp.inf ещё/D раз/Nms4=time","На следующий день мастер пришёл и быстро починил кран.":"на/Pr4 следующий/Ams4 день/Nms4 мастер/Nms1 прийти/Vp.pam и/C быстро/D починить/Vp.pam кран/Nms4","Али поблагодарил его и сказал, что теперь всё в порядке.":"- поблагодарить/Vp.pam он/Rms4 и/C сказать/Vp.pam что/C теперь/D всё/Rns1 в/Pr6 порядок/Nms6","Летом Мария хочет поехать домой, чтобы увидеть родителей.":"летом/D - хотеть/Vi.pr3s поехать/Vp.inf домой/D чтобы/C увидеть/Vp.inf родитель/Nmp4!anim","Но билет на самолёт стоит очень дорого.":"но/C билет/Nms1 на/Pr4 самолёт/Nms4 стоить/Vi.pr3s очень/D дорого/D","Если она найдёт работу, то сможет купить билет.":"если/C она/Rfs1 найти/Vp.fu3s работа/Nfs4 то/C смочь/Vp.fu3s купить/Vp.inf билет/Nms4","Поэтому она ищет подработку в кафе возле университета.":"поэтому/D она/Rfs1 искать/Vi.pr3s подработка/Nfs4 в/Pr6 кафе/Nns6!ind возле/Pr2 университет/Nms2","Её подруга Анна советует не ждать до июня.":"её/Afs1!poss подруга/Nfs1 - советовать/Vi.pr3s не/T ждать/Vi.inf до/Pr2 июнь/Nms2","«Чем раньше ты начнёшь, тем больше заработаешь», — говорит Анна.":"чем/C рано/D ты/Rxs1 начать/Vp.fu2s то/C больше/D заработать/Vp.fu2s говорить/Vi.pr3s -","Мария решила начать искать работу уже сегодня.":"- решить/Vp.paf начать/Vp.inf искать/Vi.inf работа/Nfs4 уже/D сегодня/D","Когда Омар приехал в Россию, всё казалось ему странным.":"когда/C - приехать/Vp.pam в/Pr4 Россия/Nfs4 всё/Rns1 казаться/Vi.pan!refl он/Rms3 странный/Ams5=predins","Зима была слишком длинной, а еда — непривычной.":"зима/Nfs1 быть/Vi.paf слишком/D длинный/Afs5=predins а/C еда/Nfs1 привычный/Afs5=predins","Но постепенно он привык к холоду и полюбил русский борщ.":"но/C постепенно/D он/Rms1 привыкнуть/Vp.pam к/Pr3 холод/Nms3 и/C полюбить/Vp.pam русский/Ams4 борщ/Nms4","Теперь он понимает, что русские очень гостеприимные люди.":"теперь/D он/Rms1 понимать/Vi.pr3s что/C русский/Amp1!adjn очень/D гостеприимный/Amp1 человек/Nmp1!irr=pred","Хотя у него ещё бывают трудности с языком, он не сдаётся.":"хотя/C у/Pr2!uhave он/Rms2!nin ещё/D бывать/Vi.pr3p трудность/Nfp1=thing с/Pr5 язык/Nms5 он/Rms1 не/T сдаваться/Vi.pr3s!refl","Он занимается каждый день, потому что хочет хорошо говорить по-русски.":"он/Rms1 заниматься/Vi.pr3s!refl каждый/Ams4 день/Nms4=time потому/D что/C хотеть/Vi.pr3s хорошо/D говорить/Vi.inf по-русски/D","Омар уверен, что через год он будет свободно разговаривать.":"- уверенный/As.m!short что/C через/Pr4 год/Nms4 он/Rms1 быть/Vi.fu3s свободно/D разговаривать/Vi.inf","Дорогой Саид! Пишу тебе из Москвы, где я живу уже три месяца.":"дорогой/Ams1 - писать/Vi.pr1s ты/Rxs3=io из/Pr2 Москва/Nfs2 где/D я/Rxs1 жить/Vi.pr1s уже/D три/Mxp4 месяц/Nms2!gq=quant","Университет мне очень нравится, но учиться здесь непросто.":"университет/Nms1 я/Rxs3=exp очень/D нравиться/Vi.pr3s!refl но/C учиться/Vi.inf!refl здесь/D непросто/D","Каждый день у нас бывает по четыре пары, а потом ещё домашнее задание.":"каждый/Ams4 день/Nms4=time у/Pr2!uhave мы/Rxp2 бывать/Vi.pr3s по/Pr4 четыре/Mxp4 пара/Nfs2!gq=quant а/C потом/D ещё/D домашний/Ans1 задание/Nns1","Зато я познакомился с интересными людьми из разных стран.":"зато/C я/Rxs1 познакомиться/Vp.pam!refl с/Pr5 интересный/Amp5 человек/Nmp5!irr из/Pr2 разный/Amp2 страна/Nfp2!gpl","На выходных мы вместе ходим в музеи и в театр.":"на/Pr6 выходной/Nmp6!adjn мы/Rxp1 вместе/D ходить/Vi.pr1p!motion в/Pr4 музей/Nmp4 и/C в/Pr4 театр/Nms4","Приезжай ко мне летом, и я покажу тебе весь город!":"приезжать/Vi.im2s к/Pr3 я/Rxs3 летом/D и/C я/Rxs1 показать/Vp.fu1s ты/Rxs3=io весь/Ams4 город/Nms4=do","Жду твоего ответа. Твой друг Али.":"ждать/Vi.pr1s!gengov твой/Ams2!poss ответ/Nms2=do твой/Ams1!poss друг/Nms1 -","Али мечтает стать инженером и строить мосты и дороги.":"- мечтать/Vi.pr3s стать/Vp.inf инженер/Nms5=predins и/C строить/Vi.inf мост/Nmp4 и/C дорога/Nfp4","Поэтому он приехал в Россию и поступил на подготовительный факультет МАДИ.":"поэтому/D он/Rms1 приехать/Vp.pam в/Pr4 Россия/Nfs4 и/C поступить/Vp.pam на/Pr4 подготовительный/Ams4 факультет/Nms4 -","Сначала ему было трудно, но он не жаловался.":"сначала/D он/Rms3=exp быть/Vi.pan трудно/D но/C он/Rms1 не/T жаловаться/Vi.pam!refl","Каждый вечер он повторял новые слова и писал небольшие тексты.":"каждый/Ams4 вечер/Nms4=time он/Rms1 повторять/Vi.pam новый/Anp4 слово/Nnp4 и/C писать/Vi.pam небольшой/Amp4 текст/Nmp4","Преподаватели заметили, что он очень старается, и стали давать ему дополнительные задания.":"преподаватель/Nmp1 заметить/Vp.pap что/C он/Rms1 очень/D стараться/Vi.pr3s!refl и/C стать/Vp.pap давать/Vi.inf он/Rms3=io дополнительный/Anp4 задание/Nnp4","Если он успешно сдаст экзамены, то сможет поступить на факультет, о котором мечтал.":"если/C он/Rms1 успешно/D сдать/Vp.fu3s экзамен/Nmp4 то/C смочь/Vp.fu3s поступить/Vp.inf на/Pr4 факультет/Nms4 о/Pr6 который/Rms6 мечтать/Vi.pam","Он уверен, что трудности, которые он преодолел, сделали его сильнее.":"он/Rms1 уверенный/As.m!short что/C трудность/Nfp1 который/Rxp4 он/Rms1 преодолеть/Vp.pam сделать/Vp.pap он/Rms4 сильный/Ac","мосте/мосту":"мост/Nms6 мост/Nms6","Кто это? — Это Анна.":"кто/Rxs1 это/Rns1!eto это/Rns1!eto -","Что это? — Это книга.":"что/Rns1 это/Rns1!eto это/Rns1!eto книга/Nfs1=pred","Студент читает.":"студент/Nms1 читать/Vi.pr3s","Это мой дом.":"это/Rns1!eto мой/Ams1!poss дом/Nms1=pred","Анна — врач.":"- врач/Nms1=pred","Вот моя сестра.":"вот/T мой/Afs1!poss сестра/Nfs1=pred","Меня зовут Амин.":"я/Rxs4 звать/Vi.pr3p -","Добрый день!":"добрый/Ams1 день/Nms1","он · оно":"он/Rms1 оно/Rns1","один рубль · одна копейка · одно окно":"один/Mms1!num рубль/Nms1 один/Mfs1!num копейка/Nfs1 один/Mns1!num окно/Nns1","Какое сегодня число? — Сегодня двадцатое мая.":"какой/Ans1 сегодня/D число/Nns1 сегодня/D двадцатый/Ans1 май/Nms2!date","У Антона нет машины.":"у/Pr2!uhave - нет/T машина/Nfs2=neg","Это комната соседки.":"это/Rns1!eto комната/Nfs1=pred соседка/Nfs2=possr","Я взял ручку у друга.":"я/Rxs1 взять/Vp.pam ручка/Nfs4 у/Pr2 друг/Nms2","В группе много студентов.":"в/Pr6 группа/Nfs6 много/D студент/Nmp2=quant","Двадцатого мая.":"двадцатый/Ans2 май/Nms2!date","Невский проспект короче Московского проспекта.":"невский/Ams1 проспект/Nms1 короткий/Ac московский/Ams2 проспект/Nms2=comp","Мы живём далеко от центра.":"мы/Rxp1 жить/Vi.pr1p далеко/D от/Pr2 центр/Nms2","справа от":"справа/D от/Pr2","слева от":"слева/D от/Pr2","далеко от":"далеко/D от/Pr2","недалеко от":"недалеко/D от/Pr2","близко от":"близко/D от/Pr2","Где станция метро? — Напротив университета.":"где/D станция/Nfs1 метро/Nns2!ind=possr напротив/Pr2 университет/Nms2","Где мы встретимся? — У входа.":"где/D мы/Rxp1 встретиться/Vp.fu1p!refl у/Pr2 вход/Nms2","Лампа стоит около компьютера.":"лампа/Nfs1 стоять/Vi.pr3s около/Pr2 компьютер/Nms2","Стулья стоят вокруг стола.":"стул/Nmp1!ppl стоять/Vi.pr3p вокруг/Pr2 стол/Nms2","Торшер стоит справа от кровати.":"торшер/Nms1 стоять/Vi.pr3s справа/D от/Pr2 кровать/Nfs2","Я не могу жить без музыки.":"я/Rxs1 не/T мочь/Vi.pr1s жить/Vi.inf без/Pr2 музыка/Nfs2","Это подарок для брата.":"это/Rns1!eto подарок/Nms1=pred для/Pr2 брат/Nms2","Как добраться до Петербурга?":"как/D добраться/Vp.inf до/Pr2 Петербург/Nms2","Я работаю у директора.":"я/Rxs1 работать/Vi.pr1s у/Pr2 директор/Nms2","Я видела Ивана у Маши дома.":"я/Rxs1 видеть/Vi.paf Иван/Nms4!anim у/Pr2 Маша/Nfs2 дома/D","Я попросила у Андрея ручку.":"я/Rxs1 попросить/Vp.paf у/Pr2 Андрей/Nms2 ручка/Nfs4","У меня нет времени.":"у/Pr2!uhave я/Rxs2 нет/T время/Nns2=neg!ya","Я был у бабушки, а сегодня иду к дяде.":"я/Rxs1 быть/Vi.pam у/Pr2 бабушка/Nfs2 а/C сегодня/D идти/Vi.pr1s!motion к/Pr3 дядя/Nms3!amasc","Сколько студентов в группе? — Девять.":"сколько/D студент/Nmp2=quant в/Pr6 группа/Nfs6 девять/Mxs1","В Петербурге много мостов, но мало гостиниц.":"в/Pr6 Петербург/Nms6 много/D мост/Nmp2!gpl=quant но/C мало/D гостиница/Nfp2!gpl=quant","У одного моего брата есть ноутбук.":"у/Pr2!uhave один/Mms2 мой/Ams2!poss брат/Nms2 быть/Vi.pr3s ноутбук/Nms1=thing","У этой студентки есть словарь.":"у/Pr2!uhave этот/Afs2 студентка/Nfs2 быть/Vi.pr3s словарь/Nms1=thing","Двадцатого мая тысяча девятьсот восемьдесят первого года.":"двадцатый/Ans2 май/Nms2!date тысяча/Nfs1 девятьсот/Mxs1 восемьдесят/Mxs1 первый/Ams2 год/Nms2","Без пятнадцати два. · Пять минут первого.":"без/Pr2 пятнадцать/Mxs2 два/Mxs1 пять/Mxs1 минута/Nfp2!gq первый/Ams2","Я люблю девушку, без которой не могу жить.":"я/Rxs1 любить/Vi.pr1s девушка/Nfs4 без/Pr2 который/Rfs2 не/T мочь/Vi.pr1s жить/Vi.inf","Андрей всегда давал Марии книги.":"- всегда/D давать/Vi.pam Мария/Nfs3=io книга/Nfp4","Мать каждый день звонила дочери.":"мать/Nfs1!irr каждый/Ams4 день/Nms4=time звонить/Vi.paf дочь/Nfs3!irr=io","Анна нравится Джону.":"Анна/Nfs1 нравиться/Vi.pr3s!refl Джон/Nms3=exp","Мне холодно.":"я/Rxs3=exp холодно/D","Сколько тебе лет? — Мне двадцать лет.":"сколько/D ты/Rxs3=exp год/Nmp2!irr=quant я/Rxs3=exp двадцать/Mxs1 год/Nmp2!irr=quant","Анне нельзя курить.":"Анна/Nfs3=exp нельзя/D курить/Vi.inf","Сегодня я иду к дяде.":"сегодня/D я/Rxs1 идти/Vi.pr1s!motion к/Pr3 дядя/Nms3!amasc","Дети гуляют по парку.":"ребёнок/Nmp1!irr гулять/Vi.pr3p по/Pr3 парк/Nms3","Преподавательница посоветовала студентам больше читать.":"преподавательница/Nfs1 посоветовать/Vp.paf студент/Nmp3=io больше/D читать/Vi.inf","Родители часто покупают подарки сыновьям и дочерям.":"родитель/Nmp1 часто/D покупать/Vi.pr3p подарок/Nmp4 сын/Nmp3!irr=io и/C дочь/Nfp3!irr=io","Он всегда даёт мне книги.":"он/Rms1 всегда/D давать/Vi.pr3s я/Rxs3=io книга/Nfp4","Я часто покупаю себе мороженое.":"я/Rxs1 часто/D покупать/Vi.pr1s себя/Rxs3=io мороженое/Nns4!adjn","Я звоню своему брату Джону.":"я/Rxs1 звонить/Vi.pr1s свой/Ams3!poss брат/Nms3=io Джон/Nms3=io","Я показал дорогу этому туристу.":"я/Rxs1 показать/Vp.pam дорога/Nfs4 этот/Ams3 турист/Nms3=io","Мы звоним вашим родителям.":"мы/Rxp1 звонить/Vi.pr1p ваш/Amp3!poss родитель/Nmp3=io","Мне было хорошо вчера. · Мне будет хорошо завтра.":"я/Rxs3=exp быть/Vi.pan хорошо/D вчера/D я/Rxs3=exp быть/Vi.fu3s хорошо/D завтра/D","Они мне очень понравились. · Он мне очень понравился.":"они/Rxp1 я/Rxs3=exp очень/D понравиться/Vp.pap!refl он/Rms1 я/Rxs3=exp очень/D понравиться/Vp.pam!refl","Маме нравится готовить.":"мама/Nfs3=exp нравиться/Vi.pr3s!refl готовить/Vi.inf","Раньше мне нравилось кататься на лыжах. · Мне понравилось в Москве.":"раньше/D я/Rxs3=exp нравиться/Vi.pan!refl кататься/Vi.inf!refl на/Pr6 лыжа/Nfp6 я/Rxs3=exp понравиться/Vp.pan!refl в/Pr6 Москва/Nfs6","Сколько лет Петербургу?":"сколько/D год/Nmp2!irr=quant Петербург/Nms3=exp","Нам нужно много заниматься.":"мы/Rxp3=exp нужно/D много/D заниматься/Vi.inf!refl","Вам можно есть всё.":"вы/Rxp3=exp можно/D есть/Vi.inf всё/Rns4","Вчера я был у бабушки, а сегодня ходил к дяде.":"вчера/D я/Rxs1 быть/Vi.pam у/Pr2 бабушка/Nfs2 а/C сегодня/D ходить/Vi.pam!motion к/Pr3 дядя/Nms3!amasc","Анна вчера была у тебя? — Да, она приезжала ко мне.":"- вчера/D быть/Vi.paf у/Pr2 ты/Rxs2 да/T она/Rfs1 приезжать/Vi.paf к/Pr3 я/Rxs3","Я знаю человека, к которому вы ходили в гости.":"я/Rxs1 знать/Vi.pr1s человек/Nms4!anim к/Pr3 который/Rms3 вы/Rxp1 ходить/Vi.pap!motion в/Pr4 гость/Nmp4","Я люблю друзей, которым часто звоню.":"я/Rxs1 любить/Vi.pr1s друг/Nmp4!irr!anim который/Rmp3 часто/D звонить/Vi.pr1s","Ты звонишь своему другу.":"ты/Rxs1 звонить/Vi.pr2s свой/Ams3!poss друг/Nms3=io","Мама читает книгу.":"мама/Nfs1 читать/Vi.pr3s книга/Nfs4","Мы идём в парк. Он идёт на работу.":"мы/Rxp1 идти/Vi.pr1p!motion в/Pr4 парк/Nms4 он/Rms1 идти/Vi.pr3s!motion на/Pr4 работа/Nfs4","Я приду в пятницу. Он спал всю ночь.":"я/Rxs1 прийти/Vp.fu1s в/Pr4 пятница/Nfs4=time он/Rms1 спать/Vi.pam весь/Afs4 ночь/Nfs4=time","Спасибо за помощь. Он рассказывает про Россию.":"спасибо/I за/Pr4 помощь/Nfs4 он/Rms1 рассказывать/Vi.pr3s про/Pr4 Россия/Nfs4","Билет стоит сто рублей.":"билет/Nms1 стоить/Vi.pr3s сто/Mxs4 рубль/Nmp2!gq=quant","Я смотрю фильм. Я знаю его.":"я/Rxs1 смотреть/Vi.pr1s фильм/Nms4 я/Rxs1 знать/Vi.pr1s он/Rms4","Я надеюсь на отца.":"я/Rxs1 надеяться/Vi.pr1s!refl на/Pr4 отец/Nms4!anim!flv","Я вижу брата. Я вижу сестру.":"я/Rxs1 видеть/Vi.pr1s брат/Nms4!anim я/Rxs1 видеть/Vi.pr1s сестра/Nfs4","Я знаю Анну и Ивана.":"я/Rxs1 знать/Vi.pr1s Анна/Nfs4 и/C Иван/Nms4!anim","Я видела журналистов, врачей и учителей.":"я/Rxs1 видеть/Vi.paf журналист/Nmp4!anim!gpl врач/Nmp4!anim!gpl и/C учитель/Nmp4!anim!gpl","Здесь нет журналистов, врачей и учителей.":"здесь/D нет/T журналист/Nmp2!gpl=neg врач/Nmp2!gpl=neg и/C учитель/Nmp2!gpl=neg","Все любят кошек, собак и детей.":"все/Rxp1 любить/Vi.pr3p кошка/Nfp4!anim!gpl собака/Nfp4!anim!gpl и/C ребёнок/Nmp4!anim!irr","У меня нет денег и нет детей.":"у/Pr2!uhave я/Rxs2 нет/T деньги/Nfp2!plt=neg и/C нет/T ребёнок/Nmp2!irr=neg","выходной день":"выходной/Ams1 день/Nms1","Ирина прекрасно поёт. Все слушают её.":"- прекрасно/D петь/Vi.pr3s все/Rxp1 слушать/Vi.pr3p она/Rfs4","Это мой ключ. Я никогда не забываю его.":"это/Rns1!eto мой/Ams1!poss ключ/Nms1=pred я/Rxs1 никогда/D не/T забывать/Vi.pr1s он/Rms4","Я буду ждать тебя на остановке.":"я/Rxs1 быть/Vi.fu1s ждать/Vi.inf ты/Rxs4 на/Pr6 остановка/Nfs6","Мы любим наши фильмы.":"мы/Rxp1 любить/Vi.pr1p наш/Amp4!poss фильм/Nmp4","Она убрала нашу комнату.":"она/Rfs1 убрать/Vp.paf наш/Afs4!poss комната/Nfs4","Я купила новое синее пальто.":"я/Rxs1 купить/Vp.paf новый/Ans4 синий/Ans4 пальто/Nns4!ind","интересную книгу · симпатичную девушку · интересные книги · интересных людей":"интересный/Afs4 книга/Nfs4 симпатичный/Afs4 девушка/Nfs4!anim интересный/Afp4 книга/Nfp4 интересный/Amp4!anim человек/Nmp4!irr!anim","Я знаю этого молодого профессора.":"я/Rxs1 знать/Vi.pr1s этот/Ams4!anim молодой/Ams4!anim профессор/Nms4!anim","Мы знаем русские народные песни и интересных людей.":"мы/Rxp1 знать/Vi.pr1p русский/Afp4 народный/Afp4 песня/Nfp4 и/C интересный/Amp4!anim человек/Nmp4!irr!anim","Я взял свою книгу. Он взял мою книгу.":"я/Rxs1 взять/Vp.pam свой/Afs4!poss книга/Nfs4 он/Rms1 взять/Vp.pam мой/Afs4!poss книга/Nfs4","Он любит свою сестру. Я встретил его сестру.":"он/Rms1 любить/Vi.pr3s свой/Afs4!poss сестра/Nfs4 я/Rxs1 встретить/Vp.pam он/Rms2!ego сестра/Nfs4","Антон пригласил подругу Анну на выставку.":"- пригласить/Vp.pam подруга/Nfs4!anim Анна/Nfs4!anim на/Pr4 выставка/Nfs4","Они пригласили Антона поехать в Москву.":"они/Rxp1 пригласить/Vp.pap Антон/Nms4!anim поехать/Vp.inf в/Pr4 Москва/Nfs4","Как зовут ваших родителей? Как зовут нашего преподавателя?":"как/D звать/Vi.pr3p ваш/Amp4!poss!anim родитель/Nmp4!anim как/D звать/Vi.pr3p наш/Ams4!poss!anim преподаватель/Nms4!anim","Я купил новый галстук, который мне понравился.":"я/Rxs1 купить/Vp.pam новый/Ams4 галстук/Nms4 который/Rms1 я/Rxs3=exp понравиться/Vp.pam!refl","Андрей полюбил девушку, которую он недавно встретил.":"- полюбить/Vp.pam девушка/Nfs4 который/Rfs4 он/Rms1 недавно/D встретить/Vp.pam","Я знаю человека, которого ты тоже знаешь.":"я/Rxs1 знать/Vi.pr1s человек/Nms4!anim который/Rms4!anim ты/Rxs1 тоже/D знать/Vi.pr2s","Нам понравились люди, которых мы встретили здесь.":"мы/Rxp3=exp понравиться/Vp.pap!refl человек/Nmp1!irr который/Rmp4!anim мы/Rxp1 встретить/Vp.pap здесь/D","— Какую книгу купила твоя подруга? — Интересную книгу.":"какой/Afs4 книга/Nfs4 купить/Vp.paf твой/Afs1!poss подруга/Nfs1 интересный/Afs4 книга/Nfs4","— Кого ты любишь? — Своего брата.":"кто/Rms4!anim ты/Rxs1 любить/Vi.pr2s свой/Ams4!poss!anim брат/Nms4!anim","— Я видела твою сестру. — А какую сестру ты видела? — Старшую.":"я/Rxs1 видеть/Vi.paf твой/Afs4!poss сестра/Nfs4 а/C какой/Afs4 сестра/Nfs4 ты/Rxs1 видеть/Vi.paf старший/Afs4","Раньше я занимался спортом.":"раньше/D я/Rxs1 заниматься/Vi.pam!refl спорт/Nms5!insgov","Все люди пишут ручкой.":"весь/Rxp1 человек/Nmp1!irr писать/Vi.pr3p ручка/Nfs5=tool","Мой отец работает учителем.":"мой/Ams1!poss отец/Nms1!flv работать/Vi.pr3s учитель/Nms5=predins","Мать гордится дочерью.":"мать/Nfs1!irr гордиться/Vi.pr3s!refl дочь/Nfs5!irr!insgov","Я хожу в кино с другом.":"я/Rxs1 ходить/Vi.pr1s!motion в/Pr4 кино/Nns4!ind с/Pr5 друг/Nms5","Над столом висит картина.":"над/Pr5 стол/Nms5 висеть/Vi.pr3s картина/Nfs1","Чем вы раньше занимались? — Я занимался спортом.":"что/Rns5 вы/Rxp1 раньше/D заниматься/Vi.pap!refl я/Rxs1 заниматься/Vi.pam!refl спорт/Nms5!insgov","Кем хочет стать твоя сестра? — Моя сестра хочет стать актрисой.":"кто/Rxs5 хотеть/Vi.pr3s стать/Vp.inf твой/Afs1!poss сестра/Nfs1 мой/Afs1!poss сестра/Nfs1 хотеть/Vi.pr3s стать/Vp.inf актриса/Nfs5=predins","В парке мы любовались природой.":"в/Pr6 парк/Nms6 мы/Rxp1 любоваться/Vi.pap!refl природа/Nfs5!insgov","Мой дедушка был инженером.":"мой/Ams1!poss дедушка/Nms1!amasc быть/Vi.pam инженер/Nms5=predins","Художники рисуют кистью.":"художник/Nmp1 рисовать/Vi.pr3p кисть/Nfs5=tool","Я разговаривала по телефону с подругой.":"я/Rxs1 разговаривать/Vi.paf по/Pr3 телефон/Nms3 с/Pr5 подруга/Nfs5","В библиотеке я познакомилась с японцем и американкой.":"в/Pr6 библиотека/Nfs6 я/Rxs1 познакомиться/Vp.paf!refl с/Pr5 японец/Nms5 и/C американка/Nfs5","Я езжу в Пушкин с друзьями.":"я/Rxs1 ездить/Vi.pr1s!motion в/Pr4 Пушкин/Nms4 с/Pr5 друг/Nmp5!irr","Я всегда советуюсь с родителями.":"я/Rxs1 всегда/D советоваться/Vi.pr1s!refl с/Pr5 родитель/Nmp5","Дети гуляют с родителями.":"ребёнок/Nmp1!irr гулять/Vi.pr3p с/Pr5 родитель/Nmp5","Моя сестра любит спорить со мной.":"мой/Afs1!poss сестра/Nfs1 любить/Vi.pr3s спорить/Vi.inf с/Pr5 я/Rxs5","Мы хотим пойти в театр. Ты пойдёшь с нами?":"мы/Rxp1 хотеть/Vi.pr1p пойти/Vp.inf в/Pr4 театр/Nms4 ты/Rxs1 пойти/Vp.fu2s с/Pr5 мы/Rxp5","Я познакомилась с ним в университете.":"я/Rxs1 познакомиться/Vp.paf!refl с/Pr5 он/Rms5!nin в/Pr6 университет/Nms6","Что с тобой? Почему ты такая грустная? — Ничего, со мной всё в порядке.":"что/Rns1 с/Pr5 ты/Rxs5 почему/D ты/Rxs1 такой/Afs1 грустный/Afs1 ничто/Rns2 с/Pr5 я/Rxs5 всё/Rns1 в/Pr6 порядок/Nms6","рядом с":"рядом/D с/Pr5","Перед занятиями я всегда пью кофе.":"перед/Pr5 занятие/Nnp5 я/Rxs1 всегда/D пить/Vi.pr1s кофе/Nms4!ind","Гараж находится под домом.":"гараж/Nms1 находиться/Vi.pr3s!refl под/Pr5 дом/Nms5","Я живу рядом с университетом.":"я/Rxs1 жить/Vi.pr1s рядом/D с/Pr5 университет/Nms5","В классе мы сидим за столами. В театре я сидела за женщиной.":"в/Pr6 класс/Nms6 мы/Rxp1 сидеть/Vi.pr1p за/Pr5 стол/Nmp5 в/Pr6 театр/Nms6 я/Rxs1 сидеть/Vi.paf за/Pr5 женщина/Nfs5","В субботу я ходила в магазин за продуктами.":"в/Pr4 суббота/Nfs4=time я/Rxs1 ходить/Vi.paf!motion в/Pr4 магазин/Nms4 за/Pr5 продукт/Nmp5","Я с радостью прочитал ваше письмо.":"я/Rxs1 с/Pr5 радость/Nfs5 прочитать/Vp.pam ваш/Ans4!poss письмо/Nns4","Родители часто говорят о детях с гордостью.":"родитель/Nmp1 часто/D говорить/Vi.pr3p о/Pr6 ребёнок/Nmp6!irr с/Pr5 гордость/Nfs5","Я переводил этот текст с трудом.":"я/Rxs1 переводить/Vi.pam этот/Ams4 текст/Nms4 с/Pr5 труд/Nms5","Мы слушали его рассказ с интересом.":"мы/Rxp1 слушать/Vi.pap он/Rms2!ego рассказ/Nms4 с/Pr5 интерес/Nms5","Я разговаривал с твоим другом.":"я/Rxs1 разговаривать/Vi.pam с/Pr5 твой/Ams5!poss друг/Nms5","Он встречался с моей сестрой.":"он/Rms1 встречаться/Vi.pam!refl с/Pr5 мой/Afs5!poss сестра/Nfs5","Я говорю по телефону с вашими друзьями.":"я/Rxs1 говорить/Vi.pr1s по/Pr3 телефон/Nms3 с/Pr5 ваш/Amp5!poss друг/Nmp5!irr","Я ходил в кино с этой девушкой.":"я/Rxs1 ходить/Vi.pam!motion в/Pr4 кино/Nns4!ind с/Pr5 этот/Afs5 девушка/Nfs5","Он живёт вместе со своими родителями.":"он/Rms1 жить/Vi.pr3s вместе/D с/Pr5 свой/Amp5!poss родитель/Nmp5","Я люблю проводить время со своими друзьями.":"я/Rxs1 любить/Vi.pr1s проводить/Vi.inf время/Nns4!ya с/Pr5 свой/Amp5!poss друг/Nmp5!irr","физика — физик":"физика/Nfs1 физик/Nms1","балет — балерина":"балет/Nms1 балерина/Nfs1","фотография — фотограф":"фотография/Nfs1 фотограф/Nms1","бизнес — бизнесмен":"бизнес/Nms1 бизнесмен/Nms1","перевод — переводчица":"перевод/Nms1 переводчица/Nfs1","спорт — спортсмен":"спорт/Nms1 спортсмен/Nms1","информатика — программист":"информатика/Nfs1 программист/Nms1","Кем работает твой отец? — Мой отец работает учителем.":"кто/Rxs5 работать/Vi.pr3s твой/Ams1!poss отец/Nms1!flv мой/Ams1!poss отец/Nms1!flv работать/Vi.pr3s учитель/Nms5=predins","Во Франции я дружила с Полем, Жаком и Жозефиной.":"в/Pr6 Франция/Nfs6 я/Rxs1 дружить/Vi.paf с/Pr5 Поль/Nms5 Жак/Nms5 и/C Жозефина/Nfs5","Он хочет заниматься бизнесом и стать бизнесменом.":"он/Rms1 хотеть/Vi.pr3s заниматься/Vi.inf!refl бизнес/Nms5!insgov и/C стать/Vp.inf бизнесмен/Nms5=predins","Она была известной балериной.":"она/Rfs1 быть/Vi.paf известный/Afs5 балерина/Nfs5=predins","Над большим письменным столом висит картина.":"над/Pr5 большой/Ams5 письменный/Ams5 стол/Nms5 висеть/Vi.pr3s картина/Nfs1","Я увлекаюсь современной музыкой.":"я/Rxs1 увлекаться/Vi.pr1s!refl современный/Afs5 музыка/Nfs5!insgov","Китайцы и японцы пишут иероглифы чёрной тушью.":"китаец/Nmp1 и/C японец/Nmp1 писать/Vi.pr3p иероглиф/Nmp4 чёрный/Afs5 тушь/Nfs5=tool","Я ездила на дачу со своими школьными друзьями.":"я/Rxs1 ездить/Vi.paf!motion на/Pr4 дача/Nfs4 с/Pr5 свой/Amp5!poss школьный/Amp5 друг/Nmp5!irr","Сегодня я встретил девушку, с которой познакомился на дискотеке.":"сегодня/D я/Rxs1 встретить/Vp.pam девушка/Nfs4 с/Pr5 который/Rfs5 познакомиться/Vp.pam!refl на/Pr6 дискотека/Nfs6","Я занимаюсь бизнесом, которым занимался мой отец.":"я/Rxs1 заниматься/Vi.pr1s!refl бизнес/Nms5!insgov который/Rms5!insgov заниматься/Vi.pam!refl мой/Ams1!poss отец/Nms1!flv","Мы поставили столы, над которыми повесили лампы.":"мы/Rxp1 поставить/Vp.pap стол/Nmp4 над/Pr5 который/Rmp5 повесить/Vp.pap лампа/Nfp4","Я живу в Москве. Книга на столе.":"я/Rxs1 жить/Vi.pr1s в/Pr6 Москва/Nfs6 книга/Nfs1 на/Pr6 стол/Nms6","Он читает книгу о Петербурге.":"он/Rms1 читать/Vi.pr3s книга/Nfs4 о/Pr6 Петербург/Nms6","Мы ездим в парк на автобусе.":"мы/Rxp1 ездить/Vi.pr1p!motion в/Pr4 парк/Nms4 на/Pr6 автобус/Nms6","Я был в Африке в октябре.":"я/Rxs1 быть/Vi.pam в/Pr6 Африка/Nfs6 в/Pr6 октябрь/Nms6=time","В субботу мы были на дискотеке.":"в/Pr4 суббота/Nfs4=time мы/Rxp1 быть/Vi.pap на/Pr6 дискотека/Nfs6","Вчера я был в библиотеке и читал книгу о Петербурге.":"вчера/D я/Rxs1 быть/Vi.pam в/Pr6 библиотека/Nfs6 и/C читать/Vi.pam книга/Nfs4 о/Pr6 Петербург/Nms6","В детстве я мечтал о жизни в Австралии.":"в/Pr6 детство/Nns6=time я/Rxs1 мечтать/Vi.pam о/Pr6 жизнь/Nfs6 в/Pr6 Австралия/Nfs6","Я живу на улице Пятницкая, в центре.":"я/Rxs1 жить/Vi.pr1s на/Pr6 улица/Nfs6 пятницкий/Afs1 в/Pr6 центр/Nms6","В каникулы мы отдыхали на юге, на море.":"в/Pr4 каникулы/Nfp4!plt=time мы/Rxp1 отдыхать/Vi.pap на/Pr6 юг/Nms6 на/Pr6 море/Nns6","Я хотел бы побывать в Японии весной, в марте.":"я/Rxs1 хотеть/Vi.pam бы/T побывать/Vp.inf в/Pr6 Япония/Nfs6 весной/D в/Pr6 март/Nms6=time","В пятницу я ходил в библиотеку, а в субботу был на дискотеке.":"в/Pr4 пятница/Nfs4=time я/Rxs1 ходить/Vi.pam!motion в/Pr4 библиотека/Nfs4 а/C в/Pr4 суббота/Nfs4=time быть/Vi.pam на/Pr6 дискотека/Nfs6","Зимой они ездили на юг, а летом были на севере.":"зимой/D они/Rxp1 ездить/Vi.pap!motion на/Pr4 юг/Nms4 а/C летом/D быть/Vi.pap на/Pr6 север/Nms6","— На чём ты ездишь в центр? — На маршрутке.":"на/Pr6 что/Rns6 ты/Rxs1 ездить/Vi.pr2s!motion в/Pr4 центр/Nms4 на/Pr6 маршрутка/Nfs6","В газетах и в журналах можно прочитать рассказы и статьи.":"в/Pr6 газета/Nfp6 и/C в/Pr6 журнал/Nmp6 можно/D прочитать/Vp.inf рассказ/Nmp4 и/C статья/Nfp4","Люди ездят на машинах, на трамваях и на автобусах.":"человек/Nmp1!irr ездить/Vi.pr3p!motion на/Pr6 машина/Nfp6 на/Pr6 трамвай/Nmp6 и/C на/Pr6 автобус/Nmp6","Я часто думаю о тебе. Он всегда рассказывает о себе.":"я/Rxs1 часто/D думать/Vi.pr1s о/Pr6 ты/Rxs6 он/Rms1 всегда/D рассказывать/Vi.pr3s о/Pr6 себя/Rxs6","Это моя тетрадь. В ней я пишу упражнения.":"это/Rns1!eto мой/Afs1!poss тетрадь/Nfs1=pred в/Pr6 она/Rfs6!nin я/Rxs1 писать/Vi.pr1s упражнение/Nnp4","— Вы были в нашем городе? — Да, мы уже были в вашем городе.":"вы/Rxp1 быть/Vi.pap в/Pr6 наш/Ams6!poss город/Nms6 да/T мы/Rxp1 уже/D быть/Vi.pap в/Pr6 ваш/Ams6!poss город/Nms6","Мы много знаем о вашей стране и были на всех ваших праздниках.":"мы/Rxp1 много/D знать/Vi.pr1p о/Pr6 ваш/Afs6!poss страна/Nfs6 и/C быть/Vi.pap на/Pr6 весь/Amp6 ваш/Amp6!poss праздник/Nmp6","Вечером я смотрел документальный фильм о Марсе. Мы разговаривали об учёбе.":"вечером/D я/Rxs1 смотреть/Vi.pam документальный/Ams4 фильм/Nms4 о/Pr6 Марс/Nms6 мы/Rxp1 разговаривать/Vi.pap о/Pr6 учёба/Nfs6","Это город, в котором я жил. Это книга, о которой я читал.":"это/Rns1!eto город/Nms1=pred в/Pr6 который/Rms6 я/Rxs1 жить/Vi.pam это/Rns1!eto книга/Nfs1=pred о/Pr6 который/Rfs6 я/Rxs1 читать/Vi.pam","Какой вопрос?":"какой/Ams1 вопрос/Nms1","кто? что?":"кто/Rxs1 что/Rns1","чей? чья? чьё? чьи?":"чей/Ams1 чей/Afs1 чей/Ans1 чей/Amp1","какой? какая? какое? какие?":"какой/Ams1 какой/Afs1 какой/Ans1 какой/Amp1","кого? чего?":"кто/Rxs2 что/Rns2","кому? чему?":"кто/Rxs3 что/Rns3","кого? что?":"кто/Rxs4 что/Rns4","кем? чем?":"кто/Rxs5 что/Rns5","о ком? о чём?":"о/Pr6 кто/Rxs6 о/Pr6 что/Rns6","Вчера я подарил подруге книгу в магазине.":"вчера/D я/Rxs1 подарить/Vp.pam подруга/Nfs3=io книга/Nfs4 в/Pr6 магазин/Nms6","в магазине":"в/Pr6 магазин/Nms6","Он гуляет с братом по парку.":"он/Rms1 гулять/Vi.pr3s с/Pr5 брат/Nms5 по/Pr3 парк/Nms3","с братом":"с/Pr5 брат/Nms5","по парку":"по/Pr3 парк/Nms3","Мы едем в Москву на поезде с друзьями.":"мы/Rxp1 ехать/Vi.pr1p!motion в/Pr4 Москва/Nfs4 на/Pr6 поезд/Nms6 с/Pr5 друг/Nmp5!irr","в Москву":"в/Pr4 Москва/Nfs4","на поезде":"на/Pr6 поезд/Nms6","с друзьями":"с/Pr5 друг/Nmp5!irr","Студенты читают новую книгу без словаря.":"студент/Nmp1 читать/Vi.pr3p новый/Afs4 книга/Nfs4 без/Pr2 словарь/Nms2","новую книгу":"новый/Afs4 книга/Nfs4","без словаря":"без/Pr2 словарь/Nms2","умножить на":"умножить/Vp.inf на/Pr4","умножить на (точка)":"умножить/Vp.inf на/Pr4 точка/Nfs4","разделить на":"разделить/Vp.inf на/Pr4","разделить на (двоеточие)":"разделить/Vp.inf на/Pr4 двоеточие/Nns4","не равно":"не/T равно/D","приблизительно равно":"приблизительно/D равно/D","меньше или равно":"меньше/D или/C равно/D","больше или равно":"больше/D или/C равно/D","много меньше":"много/D меньше/D","много больше":"много/D больше/D","тождественно равно":"тождественно/D равно/D","круглые скобки":"круглый/Afp1 скобка/Nfp1","квадратные скобки":"квадратный/Afp1 скобка/Nfp1","фигурные скобки":"фигурный/Afp1 скобка/Nfp1","в квадрате":"в/Pr6 квадрат/Nms6","в кубе":"в/Pr6 куб/Nms6","в степени эн":"в/Pr6 степень/Nfs6 -","квадратный корень":"квадратный/Ams1 корень/Nms1!flv","кубический корень":"кубический/Ams1 корень/Nms1!flv","корень энной степени":"корень/Nms1!flv энный/Afs2 степень/Nfs2=possr","одна вторая (половина)":"один/Mfs1!num второй/Afs1 половина/Nfs1","три четвёртых":"три/Mxp1 четвёртый/Amp2!frac","две пятых":"два/Mfs1!num пятый/Amp2!frac","десятичная дробь (запятая)":"десятичный/Afs1 дробь/Nfs1 запятая/Nfs1","не принадлежит":"не/T принадлежать/Vi.pr3s","пустое множество":"пустой/Ans1 множество/Nns1","подмножество или равно":"подмножество/Nns1 или/C равно/D","натуральные числа":"натуральный/Anp1 число/Nnp1","целые числа":"целый/Anp1 число/Nnp1","рациональные числа":"рациональный/Anp1 число/Nnp1","действительные числа":"действительный/Anp1 число/Nnp1","для любого":"для/Pr2 любой/Ams2","тогда и только тогда":"тогда/D и/C только/D тогда/D","не (отрицание)":"не/T отрицание/Nns1","и (конъюнкция)":"и/C конъюнкция/Nfs1","или (дизъюнкция)":"или/C дизъюнкция/Nfs1","минута (штрих)":"минута/Nfs1 штрих/Nms1","секунда (два штриха)":"секунда/Nfs1 два/Mms1!num штрих/Nms2!gq=quant","равно (конгруэнтно)":"равно/D конгруэнтно/D","стремится к":"стремиться/Vi.pr3s!refl к/Pr3","дельта (приращение)":"дельта/Nfs1 приращение/Nns1","штрих (производная)":"штрих/Nms1 производная/Nfs1!adjn","частная производная":"частный/Afs1 производная/Nfs1!adjn","натуральный логарифм":"натуральный/Ams1 логарифм/Nms1","омега (большая) / Ом":"омега/Nfs1 большой/Afs1 ом/Nms1","Косинус бета.":"косинус/Nms1 бета/Nfs1","Дельта больше нуля.":"дельта/Nfs1 больше/D нуль/Nms2=comp","Гамма равно девяноста градусам.":"гамма/Nfs1 равно/D девяносто/Mxs3=ravno градус/Nmp3=ravno","Мю равно пяти.":"- равно/D пять/Mxs3=ravno","Натуральный логарифм е равен единице.":"натуральный/Ams1 логарифм/Nms1 - равный/As.m единица/Nfs3=ravno","Котангенс сорока пяти градусов равен единице.":"котангенс/Nms1 сорок/Mxs2 пять/Mxs2 градус/Nmp2!gpl=possr равный/As.m единица/Nfs3=ravno","Сумма а-итых по и от единицы до эн.":"сумма/Nfs1 - по/Pr3 - от/Pr2 единица/Nfs2 до/Pr2 -","Произведение а-итых по и от единицы до эн.":"произведение/Nns1 - по/Pr3 - от/Pr2 единица/Nfs2 до/Pr2 -","А больше бэ.":"- больше/D -","Икс меньше или равно пяти.":"- меньше/D или/C равно/D пять/Mxs3=ravno","Отрезок от одного до пяти.":"отрезок/Nms1!flv от/Pr2 один/Mns2 до/Pr2 пять/Mxs2","Открыть скобку, два плюс три, закрыть скобку, умножить на четыре.":"открыть/Vp.inf скобка/Nfs4 два/Mxs1 плюс/D три/Mxs1 закрыть/Vp.inf скобка/Nfs4 умножить/Vp.inf на/Pr4 четыре/Mxp4","Угол А-бэ-цэ равен девяноста градусам.":"угол/Nms1!flv - равный/As.m девяносто/Mxs3=ravno градус/Nmp3=ravno","Прямая а параллельна прямой бэ.":"прямая/Nfs1!adjn - параллельный/As.f прямая/Nfs3!adjn=io -","Треугольник А-бэ-цэ.":"треугольник/Nms1 -","Прямая а перпендикулярна прямой бэ.":"прямая/Nfs1!adjn - перпендикулярный/As.f прямая/Nfs3!adjn=io -","А меньше бэ.":"- меньше/D -","Икс больше или равно двум.":"- больше/D или/C равно/D два/Mxs3=ravno","Омега равно два пи эф.":"омега/Nfs1 равно/D два/Mxs1 - -","Пси от икс.":"- от/Pr2 -","Тета равно тридцати градусам.":"- равно/D тридцать/Mxs3=ravno градус/Nmp3=ravno","Модуль минус трёх равен трём.":"модуль/Nms1 минус/D три/Mxp2 равный/As.m три/Mxp3=ravno","Интервал от одного до пяти.":"интервал/Nms1 от/Pr2 один/Mns2 до/Pr2 пять/Mxs2","Пять минус два равно трём.":"пять/Mxs1 минус/D два/Mxs1 равно/D три/Mxp3=ravno","Два плюс три равно пяти.":"два/Mxs1 плюс/D три/Mxs1 равно/D пять/Mxs3=ravno","Плюс-минус пять.":"плюс-минус/D пять/Mxs1","Двадцать пять процентов.":"двадцать/Mxs1 пять/Mxs1 процент/Nmp2!gpl=quant","Дэ игрек по дэ икс.":"- - по/Pr3 - -","Интеграл от нуля до единицы икс дэ икс.":"интеграл/Nms1 от/Pr2 нуль/Nms2 до/Pr2 единица/Nfs2 - - -","Эф от икс равно два икс.":"- от/Pr2 - равно/D два/Mxs1 -","Икс стремится к бесконечности.":"- стремиться/Vi.pr3s!refl к/Pr3 бесконечность/Nfs3","Из А следует бэ.":"из/Pr2 - следовать/Vi.pr3s -","Для любого икса из множества действительных чисел.":"для/Pr2 любой/Ams2 икс/Nms2 из/Pr2 множество/Nns2 действительный/Anp2 число/Nnp2!gpl","Икс принадлежит множеству А.":"- принадлежать/Vi.pr3s множество/Nns3=io -","Существует икс, такой что икс в квадрате равно четырём.":"существовать/Vi.pr3s икс/Nms1 такой/Ams1 что/C икс/Nms1 в/Pr6 квадрат/Nms6 равно/D четыре/Mxp3=ravno","Тридцать минут.":"тридцать/Mxs1 минута/Nfp2!gq=quant","Отрезок А-бэ равен пяти сантиметрам.":"отрезок/Nms1!flv - равный/As.m пять/Mxs3=ravno сантиметр/Nmp3=ravno","жёсткий диск":"жёсткий/Ams1 диск/Nms1","оперативная память":"оперативный/Afs1 память/Nfs1","материнская плата":"материнский/Afs1 плата/Nfs1","блок питания":"блок/Nms1 питание/Nns2=possr","операционная система":"операционный/Afs1 система/Nfs1","рабочий стол":"рабочий/Ams1 стол/Nms1","электронная почта":"электронный/Afs1 почта/Nfs1","клавиша Alt (альт)":"клавиша/Nfs1 -","клавиша Tab (табуляция)":"клавиша/Nfs1 табуляция/Nfs1","клавиша Esc (эскейп)":"клавиша/Nfs1 -","двойной щелчок":"двойной/Ams1 щелчок/Nms1!flv","правая кнопка мыши":"правый/Afs1 кнопка/Nfs1 мышь/Nfs2=possr","печатать текст":"печатать/Vi.inf текст/Nms4","Каспийское море":"каспийский/Ans1 море/Nns1","Большой Кавказ":"большой/Ams1 Кавказ/Nms1","Уральские горы":"уральский/Afp1 гора/Nfp1","Верхоянский хребет":"верхоянский/Ams1 хребет/Nms1!flv","Западный Саян":"западный/Ams1 Саян/Nms1","Восточный Саян":"восточный/Ams1 Саян/Nms1","хребет Черского":"хребет/Nms1 черский/Ams2","Российская Федерация":"российский/Afs1 федерация/Nfs1","Президент РФ":"президент/Nms1 -","Правительство РФ":"правительство/Nns1 -","Федеральное Собрание":"федеральный/Ans1 собрание/Nns1","Совет Федерации":"совет/Nms1 федерация/Nfs2=possr","Государственная Дума":"государственный/Afs1 дума/Nfs1","Экономика России является смешанной и относится к переходному типу.":"экономика/Nfs1 Россия/Nfs2=possr являться/Vi.pr3s!refl смешанный/Afs5=predins и/C относиться/Vi.pr3s!refl к/Pr3 переходный/Ams3 тип/Nms3","Древнерусское государство (Новгородская Русь, Киевская Русь)":"древнерусский/Ans1 государство/Nns1 новгородский/Afs1 Русь/Nfs1 киевский/Afs1 Русь/Nfs1","Новгородская республика":"новгородский/Afs1 республика/Nfs1","Великое княжество Владимирское":"великий/Ans1 княжество/Nns1 владимирский/Ans1","Княжество Московское":"княжество/Nns1 московский/Ans1","Великое княжество Московское":"великий/Ans1 княжество/Nns1 московский/Ans1","Царство Русское":"царство/Nns1 русский/Ans1","Российская империя":"российский/Afs1 империя/Nfs1","Российская республика (1.09 – 25.10 / 7.11.1917)":"российский/Afs1 республика/Nfs1","РСФСР (с 1922 в составе СССР)":"- с/Pr2 в/Pr6 состав/Nms6 -","Российская Федерация (с 25.12.1991)":"российский/Afs1 федерация/Nfs1 с/Pr2"};
+/* Language order: [en, fa, fr, ar, vi, zh, pt, es, tr] */
+const WQ_UI={
+why:["Why this form?","چرا این شکل؟","Pourquoi cette forme ?","لماذا هذا الشكل؟","Vì sao dạng này?","为什么是这个形式？","Por que esta forma?","¿Por qué esta forma?","Neden bu biçim?"],
+lemma:["Dictionary form","شکل اصلی (فرهنگ لغت)","Forme du dictionnaire","الصيغة الأصلية (المعجم)","Dạng gốc (từ điển)","词典原形","Forma de dicionário","Forma de diccionario","Sözlük biçimi"],
+inf:["Infinitive (dictionary form)","مصدر (شکل اصلی فعل)","Infinitif (forme du dictionnaire)","المصدر (صيغة المعجم)","Động từ nguyên mẫu","动词原形（不定式）","Infinitivo (forma de dicionário)","Infinitivo (forma de diccionario)","Mastar (sözlük biçimi)"],
+same:["✓ Already the dictionary form","✓ همین شکل اصلی است","✓ Déjà la forme du dictionnaire","✓ هذه هي الصيغة الأصلية نفسها","✓ Đây đã là dạng gốc","✓ 已经是原形","✓ Já é a forma de dicionário","✓ Ya es la forma de diccionario","✓ Zaten sözlük biçimi"],
+pos:["Part of speech","نوع کلمه","Nature du mot","نوع الكلمة","Từ loại","词性","Classe","Categoría","Sözcük türü"],
+cas:["Case","پادژ","Cas","الحالة","Cách","格","Caso","Caso","Hâl"],
+role:["Role in the sentence","نقش در جمله","Rôle dans la phrase","الدور في الجملة","Vai trò trong câu","句中作用","Função na frase","Función en la oración","Cümledeki görevi"],
+gen:["Gender","جنسیت","Genre","الجنس","Giống","性","Gênero","Género","Cinsiyet"],
+num:["Number","تعداد","Nombre","العدد","Số","数","Número","Número","Sayı"],
+tns:["Tense","زمان","Temps","الزمن","Thì","时态","Tempo","Tiempo","Zaman"],
+per:["Person","شخص","Personne","الشخص","Ngôi","人称","Pessoa","Persona","Kişi"],
+asp:["Aspect","نمای فعل","Aspect","الجانب","Thể","体","Aspecto","Aspecto","Görünüş"],
+note:["Note","نکته","À retenir","ملاحظة","Lưu ý","提示","Nota","Nota","Not"],
+close:["Close","بستن","Fermer","إغلاق","Đóng","关闭","Fechar","Cerrar","Kapat"],
+listen:["Listen","شنیدن","Écouter","استماع","Nghe","听","Ouvir","Escuchar","Dinle"],
+hint:["Tap a word → «?» explains its form","روی کلمه بزن ← «؟» شکلش را توضیح می‌دهد","Touchez un mot → « ? » explique sa forme","المس كلمة ← «؟» يشرح شكلها","Chạm vào từ → «?» giải thích dạng","点单词 → “？”解释它的形式","Toque numa palavra → «?» explica a forma","Toca una palabra → «?» explica su forma","Kelimeye dokun → «?» biçimini açıklar"]
+};
+const WQ_POS={
+N:["Noun","اسم","Nom","اسم","Danh từ","名词","Substantivo","Sustantivo","İsim"],
+A:["Adjective","صفت","Adjectif","صفة","Tính từ","形容词","Adjetivo","Adjetivo","Sıfat"],
+R:["Pronoun","ضمیر","Pronom","ضمير","Đại từ","代词","Pronome","Pronombre","Zamir"],
+V:["Verb","فعل","Verbe","فعل","Động từ","动词","Verbo","Verbo","Fiil"],
+M:["Numeral","عدد","Numéral","عدد","Số từ","数词","Numeral","Numeral","Sayı"],
+D:["Adverb","قید","Adverbe","ظرف","Phó từ","副词","Advérbio","Adverbio","Zarf"],
+C:["Conjunction","حرف ربط","Conjonction","أداة ربط","Liên từ","连词","Conjunção","Conjunción","Bağlaç"],
+T:["Particle","ادات / حرف","Particule","أداة","Tiểu từ","语气词","Partícula","Partícula","Edat"],
+I:["Interjection","صوت / ندا","Interjection","تعجب","Thán từ","感叹词","Interjeição","Interjección","Ünlem"],
+P:["Preposition","حرف اضافه","Préposition","حرف جر","Giới từ","前置词","Preposição","Preposición","Edat (ilgeç)"]
+};
+const WQ_G={
+m:["Masculine","مذکر","Masculin","مذكر","Giống đực","阳性","Masculino","Masculino","Eril"],
+f:["Feminine","مؤنث","Féminin","مؤنث","Giống cái","阴性","Feminino","Femenino","Dişil"],
+n:["Neuter","خنثی","Neutre","محايد","Giống trung","中性","Neutro","Neutro","Nötr"]
+};
+const WQ_NUM={
+s:["Singular","مفرد","Singulier","مفرد","Số ít","单数","Singular","Singular","Tekil"],
+p:["Plural","جمع","Pluriel","جمع","Số nhiều","复数","Plural","Plural","Çoğul"]
+};
+const WQ_TNS={
+pr:["Present","حال","Présent","المضارع","Hiện tại","现在时","Presente","Presente","Şimdiki zaman"],
+pa:["Past","گذشته","Passé","الماضي","Quá khứ","过去时","Passado","Pasado","Geçmiş zaman"],
+fu:["Future","آینده","Futur","المستقبل","Tương lai","将来时","Futuro","Futuro","Gelecek zaman"],
+im:["Imperative","امری","Impératif","الأمر","Mệnh lệnh","命令式","Imperativo","Imperativo","Emir kipi"],
+inf:["Infinitive","مصدر","Infinitif","المصدر","Nguyên mẫu","不定式","Infinitivo","Infinitivo","Mastar"]
+};
+const WQ_PER={
+1:["1st person (I / we)","نفر اول (من / ما)","1re pers. (je / nous)","المتكلم (أنا / نحن)","Ngôi 1 (tôi / chúng tôi)","第一人称（我/我们）","1.ª pessoa (eu / nós)","1.ª persona (yo / nosotros)","1. kişi (ben / biz)"],
+2:["2nd person (you)","نفر دوم (تو / شما)","2e pers. (tu / vous)","المخاطب (أنت / أنتم)","Ngôi 2 (bạn)","第二人称（你/你们）","2.ª pessoa (tu / vocês)","2.ª persona (tú / vosotros)","2. kişi (sen / siz)"],
+3:["3rd person (he, she, it / they)","نفر سوم (او / آن‌ها)","3e pers. (il, elle / ils)","الغائب (هو، هي / هم)","Ngôi 3 (anh ấy, cô ấy / họ)","第三人称（他/她/它/他们）","3.ª pessoa (ele, ela / eles)","3.ª persona (él, ella / ellos)","3. kişi (o / onlar)"]
+};
+const WQ_ASP={
+i:["Imperfective (process, repeated action)","ناقص (روند / تکرار)","Imperfectif (processus, répétition)","غير تام (عملية / تكرار)","Chưa hoàn thành (quá trình, lặp lại)","未完成体（过程、重复）","Imperfectivo (processo, repetição)","Imperfectivo (proceso, repetición)","Süregelen (süreç, tekrar)"],
+p:["Perfective (finished result)","کامل (نتیجه‌ی تمام‌شده)","Perfectif (résultat achevé)","تام (نتيجة مكتملة)","Hoàn thành (kết quả xong)","完成体（已完成的结果）","Perfectivo (resultado concluído)","Perfectivo (resultado completo)","Bitmiş (tamamlanan sonuç)"]
+};
+/* role texts. {p}=preposition, {c}=case name, {n}=noun */
+const WQ_ROLE={
+subj:["Subject — who/what does the action or is being described","فاعل — کسی/چیزی که کار را انجام می‌دهد یا درباره‌اش حرف می‌زنیم","Sujet — qui/quoi fait l’action ou est décrit","الفاعل/المبتدأ — من يقوم بالفعل أو يُوصَف","Chủ ngữ — ai/cái gì làm hành động hoặc được nói tới","主语——做动作或被描述的人/事物","Sujeito — quem/o que pratica a ação ou é descrito","Sujeto — quien/qué realiza la acción o es descrito","Özne — eylemi yapan ya da anlatılan kişi/şey"],
+gen:["«of» — possession or relation to another word","«مالِ …» — مالکیت یا ارتباط با کلمه‌ی دیگر","« de » — possession ou lien avec un autre mot","«من / تابع لـ» — الملكية أو الصلة بكلمة أخرى","«của» — sở hữu hoặc liên hệ với từ khác","“……的”——所属或与另一个词的关系","«de» — posse ou relação com outra palavra","«de» — posesión o relación con otra palabra","«-nin» — aitlik ya da başka sözcükle ilişki"],
+dat:["Indirect object — to whom / for whom something is given, said or done","مفعول غیرمستقیم — به چه کسی / برای چه کسی","Complément d’attribution — à qui / pour qui","المفعول غير المباشر — لمن / إلى من","Tân ngữ gián tiếp — cho ai / với ai","间接宾语——给谁/对谁","Objeto indireto — a quem / para quem","Objeto indirecto — a quién / para quién","Dolaylı tümleç — kime / kimin için"],
+acc:["Direct object — whom/what the action is done to","مفعول مستقیم — کاری روی چه کسی/چه چیزی انجام می‌شود","Complément d’objet direct — qui/quoi subit l’action","المفعول به المباشر — من/ما يقع عليه الفعل","Tân ngữ trực tiếp — hành động tác động vào ai/cái gì","直接宾语——动作作用的对象","Objeto direto — quem/o que sofre a ação","Objeto directo — a quién/qué recibe la acción","Doğrudan tümleç — eylemin yöneldiği kişi/şey"],
+ins:["Tool or companion — by what / with whom","ابزار یا همراه — با چه چیزی / با چه کسی","Moyen ou compagnon — avec quoi / avec qui","الأداة أو المرافق — بماذا / مع من","Công cụ hoặc người đi cùng — bằng gì / với ai","工具或伴随者——用什么/和谁","Instrumento ou companhia — com quê / com quem","Instrumento o compañía — con qué / con quién","Araç ya da eşlik — neyle / kiminle"],
+prp:["Place or topic — only used after a preposition (where? about what?)","مکان یا موضوع — فقط بعد از حرف اضافه (کجا؟ درباره‌ی چه؟)","Lieu ou sujet — seulement après une préposition (où ? de quoi ?)","المكان أو الموضوع — بعد حرف جر فقط (أين؟ عن ماذا؟)","Nơi chốn hoặc chủ đề — chỉ dùng sau giới từ (ở đâu? về gì?)","地点或话题——只用在前置词后（在哪？关于什么？）","Lugar ou assunto — só depois de preposição (onde? sobre quê?)","Lugar o tema — solo tras preposición (¿dónde? ¿sobre qué?)","Yer ya da konu — yalnızca edattan sonra (nerede? ne hakkında?)"],
+pre:["After the preposition «{p}» — it requires the {c} case","بعد از حرف اضافه‌ی «{p}» — این حرف اضافه، پادژ «{c}» می‌خواهد","Après la préposition « {p} » — elle exige le cas {c}","بعد حرف الجر «{p}» — يتطلب حالة «{c}»","Sau giới từ «{p}» — đòi hỏi cách {c}","在前置词“{p}”之后——它要求用“{c}”","Depois da preposição «{p}» — ela exige o caso {c}","Tras la preposición «{p}» — exige el caso {c}","«{p}» edatından sonra — {c} hâlini ister"],
+preDir:["After «{p}» + accusative = DIRECTION: where TO? (moving in/onto)","بعد از «{p}» + مفعولی = جهت: به کجا؟ (حرکت به سمت)","Après « {p} » + accusatif = DIRECTION : vers où ?","بعد «{p}» + المفعول = الاتجاه: إلى أين؟","Sau «{p}» + đối cách = HƯỚNG: đi đâu? (di chuyển tới)","“{p}”+宾格 = 方向：去哪里？（移动进入/到上面）","Após «{p}» + acusativo = DIREÇÃO: para onde?","Tras «{p}» + acusativo = DIRECCIÓN: ¿hacia dónde?","«{p}» + belirtme hâli = YÖN: nereye?"],
+preLoc:["After «{p}» + prepositional = LOCATION: where? (being in/on)","بعد از «{p}» + حالت محلی = مکان: کجا؟ (بودن در)","Après « {p} » + prépositionnel = LIEU : où ?","بعد «{p}» + حالة الجر = المكان: أين؟","Sau «{p}» + giới cách = NƠI CHỐN: ở đâu?","“{p}”+前置格 = 地点：在哪里？","Após «{p}» + preposicional = LUGAR: onde?","Tras «{p}» + preposicional = LUGAR: ¿dónde?","«{p}» + bulunma hâli = YER: nerede?"],
+pred:["Predicate noun — tells what the subject is (nominative after «это» or a dash)","اسمِ خبر — می‌گوید فاعل چیست (فاعلی بعد از «это» یا خط تیره)","Attribut — dit ce qu’est le sujet (nominatif après « это » ou un tiret)","الخبر — يبيّن ما هو المبتدأ (مرفوع بعد «это» أو شرطة)","Vị ngữ danh từ — nói chủ ngữ là gì (cách 1 sau «это» hoặc dấu gạch)","表语名词——说明主语是什么（“это”或破折号后用主格）","Predicativo — diz o que é o sujeito (nominativo após «это» ou travessão)","Atributo — dice qué es el sujeto (nominativo tras «это» o raya)","Yüklem ismi — öznenin ne olduğunu söyler («это» ya da tireden sonra yalın hâl)"],
+thing:["The thing that exists / is owned — grammatical subject of «there is…», so nominative","چیزی که وجود دارد / مال کسی است — فاعل دستوری «هست…» پس فاعلی","La chose qui existe / possédée — sujet grammatical de « il y a… », donc nominatif","الشيء الموجود/المملوك — فاعل نحوي لـ«يوجد…» فهو مرفوع","Vật tồn tại / được sở hữu — chủ ngữ ngữ pháp của «có…», nên là cách 1","存在/被拥有的事物——“有……”的语法主语，所以用主格","A coisa que existe / possuída — sujeito gramatical de «há…», logo nominativo","La cosa que existe / se posee — sujeto gramatical de «hay…», por eso nominativo","Var olan / sahip olunan şey — «var»ın dilbilgisel öznesi, bu yüzden yalın hâl"],
+exp:["Experiencer — the person who feels, needs or likes (dative: «to me it is…»)","تجربه‌کننده — کسی که احساس می‌کند، نیاز دارد یا دوست دارد (داتیو: «برای من…»)","Éprouvant — la personne qui ressent, a besoin ou aime (datif : « à moi, il est… »)","صاحب الشعور/الحاجة (حالة الإعطاء: «بالنسبة لي…»)","Người cảm thấy / cần / thích (cách 3: «đối với tôi…»)","感受者——感觉/需要/喜欢的人（与格：“对我来说……”）","Experienciador — quem sente, precisa ou gosta (dativo: «para mim é…»)","Experimentador — quien siente, necesita o gusta (dativo: «a mí me…»)","Deneyimleyen — hisseden/ihtiyaç duyan kişi (yönelme hâli: «bana…»)"],
+quant:["Counted noun after a quantity: after 2–4 → genitive singular, after 5+ → genitive plural","اسمِ شمارش‌شده بعد از مقدار: بعد از ۲ تا ۴ ← اضافه‌ای مفرد، بعد از ۵ به بالا ← اضافه‌ای جمع","Nom compté après une quantité : après 2–4 → génitif singulier, 5+ → génitif pluriel","المعدود بعد الكمية: بعد 2–4 مفرد مجرور بالإضافة، وبعد 5 فأكثر جمع مجرور","Danh từ được đếm: sau 2–4 → cách 2 số ít, sau 5+ → cách 2 số nhiều","被数的名词：2–4之后用单数属格，5以上用复数属格","Substantivo contado: após 2–4 → genitivo singular; após 5+ → genitivo plural","Sustantivo contado: tras 2–4 → genitivo singular; tras 5+ → genitivo plural","Sayılan isim: 2–4’ten sonra tekil tamlayan, 5+’dan sonra çoğul tamlayan"],
+io:["Recipient — to whom the action is directed (indirect object, dative)","گیرنده — کار به چه کسی معطوف است (مفعول غیرمستقیم، داتیو)","Destinataire — à qui l’action est adressée (datif)","المتلقّي — من يوجَّه إليه الفعل (حالة الإعطاء)","Người nhận — hành động hướng tới ai (cách 3)","接受者——动作指向谁（间接宾语，与格）","Destinatário — a quem a ação se dirige (dativo)","Destinatario — a quien se dirige la acción (dativo)","Alıcı — eylemin yöneldiği kişi (yönelme hâli)"],
+time:["Time expression — when / how long (accusative of time)","قید زمان — کِی / چه مدت (مفعولی زمان)","Expression de temps — quand / combien de temps (accusatif)","ظرف زمان — متى / كم من الوقت (منصوب)","Trạng ngữ thời gian — khi nào / bao lâu (đối cách)","时间状语——何时/多久（宾格表示时间）","Expressão de tempo — quando / quanto tempo (acusativo)","Expresión de tiempo — cuándo / cuánto tiempo (acusativo)","Zaman ifadesi — ne zaman / ne kadar (belirtme hâli)"],
+ravno:["After «равно» (equals) the value takes the dative","بعد از «равно» (برابر است با) مقدار در حالت داتیو می‌آید","Après « равно » (égale), la valeur se met au datif","بعد «равно» (يساوي) تأتي القيمة في حالة الإعطاء","Sau «равно» (bằng) giá trị đứng ở cách 3","“равно”（等于）后面的数值用与格","Após «равно» (é igual a) o valor fica no dativo","Tras «равно» (es igual a) el valor va en dativo","«равно» (eşittir) sonrasında değer yönelme hâlinde gelir"],
+predins:["Predicate in the instrumental — after «was / became / seemed» (what? what kind?)","خبر در حالت ابزاری — بعد از «بود / شد / به نظر رسید»","Attribut à l’instrumental — après « était / devint / semblait »","الخبر في حالة الأداة — بعد «كان/أصبح/بدا»","Vị ngữ ở cách 5 — sau «đã là / trở thành / có vẻ»","工具格作表语——用在“是（过去）/成为/显得”之后","Predicativo no instrumental — após «era / tornou-se / parecia»","Atributo en instrumental — tras «era / se volvió / parecía»","Araç hâlinde yüklem — «idi / oldu / gibi göründü» sonrasında"],
+neg:["Absent thing — genitive after «нет / не было» (there is no…)","چیزِ غایب — اضافه‌ای بعد از «нет / не было» (… وجود ندارد)","Chose absente — génitif après « нет / не было » (il n’y a pas de…)","الشيء المفقود — مجرور بعد «нет / не было» (لا يوجد…)","Vật vắng mặt — cách 2 sau «нет / не было» (không có…)","不存在的事物——“нет / не было”之后用属格（没有……）","Coisa ausente — genitivo após «нет / не было» (não há…)","Cosa ausente — genitivo tras «нет / не было» (no hay…)","Olmayan şey — «нет / не было» sonrası tamlayan hâli (…yok)"],
+do:["Direct object — what the action is done to","مفعول مستقیم — چیزی که کار روی آن انجام می‌شود","Complément d’objet direct — ce qui subit l’action","المفعول به — ما يقع عليه الفعل","Tân ngữ trực tiếp — cái chịu tác động","直接宾语——动作作用的对象","Objeto direto — o que sofre a ação","Objeto directo — lo que recibe la acción","Doğrudan tümleç — eylemin yöneldiği şey"],
+doGen:["Direct object — but this verb takes it in the GENITIVE, not the accusative","مفعول مستقیم — اما این فعل آن را در حالت اضافه‌ای می‌خواهد، نه مفعولی","Objet direct — mais ce verbe le met au GÉNITIF, pas à l’accusatif","المفعول به — لكن هذا الفعل يطلبه مجرورًا (إضافة) لا منصوبًا","Tân ngữ — nhưng động từ này đòi CÁCH 2, không phải cách 4","直接宾语——但这个动词要求用属格，而不是宾格","Objeto direto — mas este verbo pede GENITIVO, não acusativo","Objeto directo — pero este verbo lo pide en GENITIVO, no en acusativo","Doğrudan tümleç — ama bu fiil tamlayan hâli ister, belirtme hâli değil"],
+tool:["Means or instrument — by what / with what","وسیله یا ابزار — با چه چیزی","Moyen ou instrument — avec quoi / par quel moyen","الوسيلة أو الأداة — بماذا","Phương tiện / công cụ — bằng cái gì","手段或工具——用什么","Meio ou instrumento — com quê","Medio o instrumento — con qué","Araç — neyle"],
+possr:["«of …» — genitive: the owner or the related noun","«مالِ …» — اضافه‌ای: مالک یا اسم مربوط","« de … » — génitif : le possesseur ou le nom lié","«… ـه» — مجرور: المالك أو الاسم المرتبط","«của …» — cách 2: chủ sở hữu hoặc danh từ liên quan","“……的”——属格：所有者或相关名词","«de …» — genitivo: o possuidor ou o nome relacionado","«de …» — genitivo: el poseedor o el nombre relacionado","«…-nin» — tamlayan hâli: sahip ya da ilişkili isim"],
+comp:["Comparison — genitive after «больше / меньше» (than …)","مقایسه — اضافه‌ای بعد از «больше / меньше» (از …)","Comparaison — génitif après « больше / меньше » (que …)","المقارنة — مجرور بعد «больше / меньше» (من …)","So sánh — cách 2 sau «больше / меньше» (hơn …)","比较——“больше / меньше”之后用属格（比……）","Comparação — genitivo após «больше / меньше» (do que …)","Comparación — genitivo tras «больше / меньше» (que …)","Karşılaştırma — «больше / меньше» sonrası tamlayan hâli (…’den)"],
+agree:["Describes the noun «{n}» → copies its gender, number and case","صفتِ اسم «{n}» است ← جنسیت، تعداد و پادژ آن را تقلید می‌کند","Décrit le nom « {n} » → copie son genre, son nombre et son cas","يصف الاسم «{n}» ← يطابقه في الجنس والعدد والحالة","Bổ nghĩa danh từ «{n}» → giống, số, cách theo nó","修饰名词“{n}”→性、数、格都与它一致","Descreve o nome «{n}» → copia gênero, número e caso","Describe al sustantivo «{n}» → copia género, número y caso","«{n}» ismini niteler → cinsiyet, sayı ve hâlini ondan alır"],
+agreeNo:["Describes a noun → adjectives copy its gender, number and case","صفتِ یک اسم است ← جنسیت، تعداد و پادژ آن را تقلید می‌کند","Décrit un nom → l’adjectif copie son genre, son nombre et son cas","يصف اسمًا ← يطابقه في الجنس والعدد والحالة","Bổ nghĩa cho danh từ → giống, số, cách theo danh từ","修饰名词→性、数、格与名词一致","Descreve um nome → copia gênero, número e caso","Describe un sustantivo → copia género, número y caso","Bir ismi niteler → cinsiyet, sayı ve hâli ondan alır"],
+verb:["Predicate — the action; the ending shows who does it and when","گزاره — کار؛ پایانه نشان می‌دهد چه کسی و چه زمانی","Prédicat — l’action ; la terminaison indique qui et quand","الفعل — الحدث؛ تدل النهاية على الفاعل والزمن","Vị ngữ — hành động; đuôi cho biết ai làm và khi nào","谓语——动作；词尾显示谁做、何时做","Predicado — a ação; a terminação mostra quem faz e quando","Predicado — la acción; la terminación indica quién y cuándo","Yüklem — eylem; ek, kimin ve ne zaman yaptığını gösterir"],
+infr:["Infinitive — the action in general form (after «хотеть, мочь, нужно…»)","مصدر — کار به شکل کلی (بعد از «хотеть، мочь، нужно…»)","Infinitif — l’action en général (après « хотеть, мочь, нужно… »)","المصدر — الفعل بصيغته العامة (بعد «хотеть، мочь، нужно…»)","Nguyên mẫu — hành động nói chung (sau «хотеть, мочь, нужно…»)","不定式——动作的一般形式（用在“хотеть、мочь、нужно……”之后）","Infinitivo — a ação em forma geral (após «хотеть, мочь, нужно…»)","Infinitivo — la acción en forma general (tras «хотеть, мочь, нужно…»)","Mastar — eylemin genel biçimi («хотеть, мочь, нужно…» sonrası)"],
+prepw:["Preposition — it decides the case of the next noun: {c}","حرف اضافه — پادژ اسمِ بعدی را تعیین می‌کند: {c}","Préposition — elle impose le cas du nom suivant : {c}","حرف جر — يحدد حالة الاسم بعده: {c}","Giới từ — quyết định cách của danh từ sau nó: {c}","前置词——决定后面名词的格：{c}","Preposição — decide o caso do nome seguinte: {c}","Preposición — decide el caso del nombre siguiente: {c}","Edat — sonraki ismin hâlini belirler: {c}"],
+invar:["Never changes its form — adverbs, conjunctions and particles stay fixed","هیچ‌وقت شکلش عوض نمی‌شود — قید، حرف ربط و ادات ثابت‌اند","Ne change jamais de forme — adverbes, conjonctions et particules sont invariables","لا تتغير صيغته — الظروف وأدوات الربط والأدوات ثابتة","Không bao giờ đổi dạng — phó từ, liên từ, tiểu từ bất biến","形式永远不变——副词、连词、语气词都是不变的","Nunca muda de forma — advérbios, conjunções e partículas são invariáveis","Nunca cambia de forma — adverbios, conjunciones y partículas son invariables","Biçimi hiç değişmez — zarf, bağlaç ve edatlar sabittir"],
+numr:["Numeral — the noun after it changes its form according to the number","عدد — شکل اسمِ بعدی بسته به عدد تغییر می‌کند","Numéral — le nom qui suit change de forme selon le nombre","عدد — يتغير شكل الاسم بعده حسب العدد","Số từ — danh từ đi sau đổi dạng theo số","数词——后面名词的形式随数字变化","Numeral — o nome seguinte muda de forma conforme o número","Numeral — el sustantivo siguiente cambia de forma según el número","Sayı — sonraki isim sayıya göre biçim değiştirir"],
+shortadj:["Predicate — short adjective: no case, it changes only by gender and number","خبر — صفت کوتاه: پادژ ندارد، فقط با جنسیت و تعداد عوض می‌شود","Prédicat — adjectif court : pas de cas, varie seulement en genre et nombre","الخبر — صفة قصيرة: بلا حالات، تتغير بالجنس والعدد فقط","Vị ngữ — tính từ ngắn: không có cách, chỉ đổi theo giống và số","谓语——短尾形容词：没有格，只随性和数变化","Predicado — adjetivo curto: sem caso, muda só em gênero e número","Predicado — adjetivo corto: sin caso, cambia solo en género y número","Yüklem — kısa sıfat: hâl almaz, yalnızca cinsiyet ve sayıya göre değişir"],
+cmpadj:["Comparative adjective — «more …», it does not change by case","صفت تفضیلی — «…‌تر»، با پادژ تغییر نمی‌کند","Adjectif comparatif — « plus … », invariable en cas","صفة تفضيل — «أكثر…» ولا تتغير بالحالات","Tính từ so sánh — «… hơn», không đổi theo cách","比较级形容词——“更……”，不随格变化","Adjetivo comparativo — «mais …», não muda de caso","Adjetivo comparativo — «más …», no cambia por caso","Karşılaştırma sıfatı — «daha …», hâle göre değişmez"],
+pronv:["Pronoun — stands in for a noun; it changes by case like a noun","ضمیر — جای اسم می‌نشیند و مثل اسم با پادژ تغییر می‌کند","Pronom — remplace un nom ; il se décline comme un nom","ضمير — ينوب عن الاسم ويتغير بالحالات مثله","Đại từ — thay cho danh từ; biến cách như danh từ","代词——代替名词，像名词一样变格","Pronome — substitui um nome; declina como um nome","Pronombre — sustituye a un nombre; se declina como él","Zamir — ismin yerini tutar; isim gibi hâl alır"]
+};
+/* special notes */
+const WQ_NOTE={
+refl:["Reflexive verb: the ending -ся/-сь means the action returns to the subject (учиться = to study; учить = to teach).","فعل بازتابی: پایانه‌ی «-ся/-сь» یعنی کار به خودِ فاعل برمی‌گردد (учиться = درس خواندن، учить = یاد دادن).","Verbe réfléchi : la terminaison -ся/-сь ramène l’action au sujet (учиться = étudier ; учить = enseigner).","فعل انعكاسي: اللاحقة -ся/-сь تعيد الفعل إلى الفاعل (учиться = يدرس، учить = يعلّم).","Động từ phản thân: đuôi -ся/-сь nghĩa là hành động quay về chủ ngữ (учиться = học; учить = dạy).","反身动词：词尾-ся/-сь表示动作回到主语身上（учиться=学习；учить=教）。","Verbo reflexivo: a terminação -ся/-сь faz a ação voltar ao sujeito (учиться = estudar; учить = ensinar).","Verbo reflexivo: la terminación -ся/-сь hace que la acción vuelva al sujeto (учиться = estudiar; учить = enseñar).","Dönüşlü fiil: -ся/-сь eki eylemin özneye döndüğünü gösterir (учиться = öğrenim görmek; учить = öğretmek)."],
+poss:["Possessive word: it agrees with the THING owned, not the owner — мой брат, моя сестра, моё письмо.","کلمه‌ی ملکی: با چیزِ مالکیت‌شده هماهنگ می‌شود نه با صاحبش — мой брат، моя сестра، моё письмо.","Possessif : il s’accorde avec la chose possédée, pas avec le possesseur — мой брат, моя сестра, моё письмо.","كلمة الملكية: تطابق الشيء المملوك لا المالك — мой брат، моя сестра، моё письмо.","Từ sở hữu: hợp với vật được sở hữu, không phải người sở hữu — мой брат, моя сестра, моё письмо.","物主词：与“被拥有的东西”一致，而不是与主人一致——мой брат、моя сестра、моё письмо。","Possessivo: concorda com a COISA possuída, não com o dono — мой брат, моя сестра, моё письмо.","Posesivo: concuerda con la COSA poseída, no con el dueño — мой брат, моя сестра, моё письмо.","İyelik sözcüğü: sahibiyle değil, sahip olunan şeyle uyum sağlar — мой брат, моя сестра, моё письмо."],
+anim:["Animate noun (person/animal): in the accusative it copies the GENITIVE form — «Я вижу брата», not «брат».","اسمِ جاندار (آدم/حیوان): در مفعولی شکلِ اضافه‌ای را می‌گیرد — «Я вижу брата» نه «брат».","Nom animé (personne/animal) : à l’accusatif il prend la forme du GÉNITIF — « Я вижу брата », pas « брат ».","اسم حي (إنسان/حيوان): في المفعول يأخذ صيغة المجرور (الإضافة) — «Я вижу брата» لا «брат».","Danh từ chỉ người/động vật: ở đối cách lấy dạng CÁCH 2 — «Я вижу брата», không phải «брат».","有生命名词（人/动物）：宾格借用属格形式——“Я вижу брата”，不是“брат”。","Substantivo animado (pessoa/animal): no acusativo copia o GENITIVO — «Я вижу брата», não «брат».","Sustantivo animado (persona/animal): en acusativo copia el GENITIVO — «Я вижу брата», no «брат».","Canlı isim (kişi/hayvan): belirtme hâlinde TAMLAYAN biçimini alır — «Я вижу брата», «брат» değil."],
+irr:["Irregular form: this word has a special, non-standard ending — learn it as a whole.","شکل بی‌قاعده: این کلمه پایانه‌ی خاص و غیرمعمول دارد — کل شکل را حفظ کن.","Forme irrégulière : ce mot a une terminaison particulière — à apprendre par cœur.","صيغة شاذة: لهذه الكلمة نهاية خاصة غير قياسية — احفظها كما هي.","Dạng bất quy tắc: từ này có đuôi đặc biệt — hãy học thuộc cả dạng.","不规则形式：这个词有特殊词尾——整体记住。","Forma irregular: esta palavra tem terminação especial — decore-a inteira.","Forma irregular: esta palabra tiene una terminación especial — memorízala entera.","Düzensiz biçim: bu sözcüğün özel bir sonu var — bütün olarak ezberleyin."],
+motion:["Verb of motion: «идти/ходить», «ехать/ездить» come in pairs — one direction now vs. habitual / round trip.","فعل حرکتی: «идти/ходить» و «ехать/ездить» جفت‌اند — یک مسیرِ همین حالا در برابر عادت/رفت‌وبرگشت.","Verbe de mouvement : « идти/ходить », « ехать/ездить » vont par paires — un trajet précis vs. habituel / aller-retour.","فعل حركة: «идти/ходить» و«ехать/ездить» أزواج — اتجاه واحد الآن مقابل المعتاد/ذهاب وإياب.","Động từ chuyển động: «идти/ходить», «ехать/ездить» đi theo cặp — một chiều lúc này và thói quen/khứ hồi.","运动动词：“идти/ходить”“ехать/ездить”成对出现——一次单向 vs. 经常/往返。","Verbo de movimento: «идти/ходить», «ехать/ездить» vêm em pares — um sentido agora vs. hábito / ida e volta.","Verbo de movimiento: «идти/ходить», «ехать/ездить» van en pares — un trayecto concreto vs. habitual / ida y vuelta.","Hareket fiili: «идти/ходить», «ехать/ездить» çift gelir — tek yön şimdi ile alışkanlık/gidiş-dönüş."],
+gpl:["Genitive PLURAL: ending is often zero (книга → книг) or -ов / -ей — it depends on the word.","اضافه‌ای جمع: پایانه اغلب صفر است (книга → книг) یا -ов / -ей — بسته به کلمه.","Génitif PLURIEL : terminaison souvent nulle (книга → книг) ou -ов / -ей — selon le mot.","المجرور الجمع: النهاية غالبًا صفر (книга → книг) أو -ов / -ей حسب الكلمة.","Cách 2 SỐ NHIỀU: đuôi thường bằng không (книга → книг) hoặc -ов / -ей — tùy từ.","复数属格：词尾常为零（книга → книг）或 -ов / -ей，取决于单词。","Genitivo PLURAL: terminação muitas vezes zero (книга → книг) ou -ов / -ей — depende da palavra.","Genitivo PLURAL: terminación a menudo cero (книга → книг) o -ов / -ей — depende de la palabra.","ÇOĞUL tamlayan: sonlama çoğu kez sıfır (книга → книг) ya da -ов / -ей — sözcüğe bağlı."],
+gq:["After 2, 3, 4 the noun is genitive SINGULAR (два рубля); after 5 and more genitive PLURAL (пять рублей).","بعد از ۲، ۳، ۴ اسم اضافه‌ای مفرد است (два рубля)؛ بعد از ۵ به بالا اضافه‌ای جمع (пять рублей).","Après 2, 3, 4 : génitif SINGULIER (два рубля) ; à partir de 5 : génitif PLURIEL (пять рублей).","بعد 2 و3 و4 يأتي المفرد المجرور (два рубля)؛ وبعد 5 فأكثر الجمع المجرور (пять рублей).","Sau 2, 3, 4: cách 2 SỐ ÍT (два рубля); từ 5 trở lên: cách 2 SỐ NHIỀU (пять рублей).","2、3、4之后用单数属格（два рубля）；5以上用复数属格（пять рублей）。","Após 2, 3, 4: genitivo SINGULAR (два рубля); de 5 em diante: genitivo PLURAL (пять рублей).","Tras 2, 3, 4: genitivo SINGULAR (два рубля); desde 5: genitivo PLURAL (пять рублей).","2, 3, 4’ten sonra TEKİL tamlayan (два рубля); 5 ve sonrası ÇOĞUL tamlayan (пять рублей)."],
+flv:["Fleeting vowel: the vowel -о- / -е- drops out when the word is inflected (день → дня, отец → отца).","مصوتِ فرار: مصوت -о- / -е- هنگام صرف حذف می‌شود (день → дня، отец → отца).","Voyelle fugitive : -о- / -е- disparaît à la déclinaison (день → дня, отец → отца).","حرف علة متحرك: يسقط -о- / -е- عند التصريف (день → дня، отец → отца).","Nguyên âm chạy: -о- / -е- biến mất khi biến cách (день → дня, отец → отца).","流动元音：变格时 -о- / -е- 会脱落（день → дня，отец → отца）。","Vogal fugitiva: -о- / -е- cai na flexão (день → дня, отец → отца).","Vocal fugaz: -о- / -е- desaparece al declinar (день → дня, отец → отца).","Kaçan ünlü: çekimde -о- / -е- düşer (день → дня, отец → отца)."],
+adjn:["Adjective used as a noun (столовая, выходной): it still declines like an adjective.","صفتی که اسم شده (столовая، выходной): هنوز مثل صفت صرف می‌شود.","Adjectif employé comme nom (столовая, выходной) : il se décline toujours comme un adjectif.","صفة استُعملت اسمًا (столовая، выходной): ما زالت تُصرَّف كالصفة.","Tính từ dùng như danh từ (столовая, выходной): vẫn biến cách như tính từ.","形容词名词化（столовая、выходной）：仍按形容词变格。","Adjetivo usado como nome (столовая, выходной): continua a declinar como adjetivo.","Adjetivo usado como sustantivo (столовая, выходной): se declina como adjetivo.","İsimleşmiş sıfat (столовая, выходной): hâlâ sıfat gibi çekimlenir."],
+ind:["Indeclinable: foreign words like метро, кафе, кино never change their ending.","تغییرناپذیر: واژه‌های خارجی مثل метро، кафе، кино هیچ‌وقت پایانه‌شان عوض نمی‌شود.","Indéclinable : les mots étrangers comme метро, кафе, кино ne changent jamais.","غير متصرّف: الكلمات الأجنبية مثل метро، кафе، кино لا تتغير نهايتها.","Bất biến: từ ngoại lai như метро, кафе, кино không bao giờ đổi đuôi.","不变格：外来词如 метро、кафе、кино 的词尾永不变化。","Indeclinável: palavras estrangeiras como метро, кафе, кино nunca mudam.","Indeclinable: palabras extranjeras como метро, кафе, кино nunca cambian.","Çekimlenmez: метро, кафе, кино gibi yabancı sözcükler hiç değişmez."],
+insgov:["This word is instrumental because the verb/noun demands it (заниматься спортом, быть врачом) — no preposition needed.","این کلمه ابزاری است چون فعل/اسم آن را می‌خواهد (заниматься спортом، быть врачом) — حرف اضافه لازم نیست.","Instrumental exigé par le verbe/nom (заниматься спортом, быть врачом) — sans préposition.","هذه الكلمة في حالة الأداة لأن الفعل/الاسم يتطلبها (заниматься спортом، быть врачом) — دون حرف جر.","Cách 5 vì động từ/danh từ đòi hỏi (заниматься спортом, быть врачом) — không cần giới từ.","用工具格是因为动词/名词要求（заниматься спортом、быть врачом）——不需要前置词。","Instrumental porque o verbo/nome o exige (заниматься спортом, быть врачом) — sem preposição.","Instrumental porque el verbo/nombre lo exige (заниматься спортом, быть врачом) — sin preposición.","Araç hâli, çünkü fiil/isim bunu ister (заниматься спортом, быть врачом) — edat gerekmez."],
+nin:["After a preposition, он / она / они get an extra «н»: у него, с ней, к ним.","بعد از حرف اضافه، он / она / они یک «н» اضافه می‌گیرند: у него، с ней، к ним.","Après une préposition, он / она / они prennent un « н » : у него, с ней, к ним.","بعد حرف الجر يضاف «н» إلى он / она / они: у него، с ней، к ним.","Sau giới từ, он / она / они thêm «н»: у него, с ней, к ним.","在前置词后，он / она / они 要加“н”：у него、с ней、к ним。","Após preposição, он / она / они ganham um «н»: у него, с ней, к ним.","Tras preposición, он / она / они añaden una «н»: у него, с ней, к ним.","Edattan sonra он / она / они fazladan «н» alır: у него, с ней, к ним."],
+amasc:["Masculine noun with a feminine-looking -а ending (папа, дядя): it declines like -а nouns but adjectives agree as masculine.","اسم مذکر با پایانه‌ی مؤنث‌نمای -а (папа، дядя): مثل اسم‌های -а صرف می‌شود اما صفت‌ها مذکر می‌آیند.","Nom masculin en -а (папа, дядя) : décliné comme les noms en -а, mais l’adjectif s’accorde au masculin.","اسم مذكر بنهاية -а (папа، дядя): يُصرَّف كأسماء -а لكن الصفة مذكّرة.","Danh từ giống đực có đuôi -а (папа, дядя): biến cách như danh từ -а nhưng tính từ chia giống đực.","阳性名词却以 -а 结尾（папа、дядя）：按 -а 词变格，但形容词用阳性。","Substantivo masculino em -а (папа, дядя): declina como os em -а, mas o adjetivo fica no masculino.","Sustantivo masculino en -а (папа, дядя): se declina como los en -а, pero el adjetivo va en masculino.","Eril ama -а ile biten isim (папа, дядя): -а’lılar gibi çekimlenir, sıfatı eril olur."],
+eto:["«Это» (this is…) never changes — the same word for any gender or number.","«Это» (این … است) تغییر نمی‌کند — برای هر جنسیت و تعدادی همان است.","« Это » (c’est…) ne change jamais — même mot pour tout genre et nombre.","«Это» (هذا هو…) لا تتغير — الكلمة نفسها لأي جنس أو عدد.","«Это» (đây là…) không bao giờ đổi — dùng cho mọi giống và số.","“Это”（这是……）永不变化——任何性、数都用同一个词。","«Это» (isto é…) nunca muda — a mesma palavra para qualquer gênero e número.","«Это» (esto es…) nunca cambia — la misma palabra para cualquier género y número.","«Это» (bu …dir) hiç değişmez — her cins ve sayı için aynı sözcük."],
+uhave:["«У + genitive» is how Russian says «to have»: у меня есть = I have (literally «by me there is»).","«у + اضافه‌ای» یعنی «داشتن» در روسی: у меня есть = من دارم (تحت‌اللفظی «نزد من هست»).","« У + génitif » = « avoir » : у меня есть = j’ai (littéralement « chez moi il y a »).","«у + المجرور» تعني «يملك»: у меня есть = عندي (حرفيًا «عندي يوجد»).","«У + cách 2» là cách nói «có»: у меня есть = tôi có (nghĩa đen «ở chỗ tôi có»).","“у + 属格”表示“拥有”：у меня есть = 我有（字面：“在我这里有”）。","«У + genitivo» é como o russo diz «ter»: у меня есть = eu tenho (literalmente «junto a mim há»).","«У + genitivo» es la forma rusa de «tener»: у меня есть = tengo (literalmente «junto a mí hay»).","«У + tamlayan» Rusça’da «sahip olmak»tır: у меня есть = bende var."],
+nobe:["No «am / is / are» in the present: Russian just says «Я студент» (I student).","در زمان حال «هستم/است» گفته نمی‌شود: روسی فقط می‌گوید «Я студент» (من دانشجو).","Pas de « suis / est » au présent : le russe dit simplement « Я студент ».","لا يُستعمل فعل «يكون» في المضارع: تقول الروسية «Я студент» (أنا طالب).","Không dùng «là» ở hiện tại: tiếng Nga chỉ nói «Я студент» (tôi sinh viên).","现在时不用“是”：俄语直接说“Я студент”（我学生）。","Sem «sou / é» no presente: o russo diz só «Я студент» (eu estudante).","Sin «soy / es» en presente: el ruso dice solo «Я студент» (yo estudiante).","Şimdiki zamanda «-im/-dir» yok: Rusça yalnızca «Я студент» der."],
+short:["Short adjective: used only as predicate; no cases, only gender/number (рад, должен, нужен).","صفت کوتاه: فقط به‌عنوان خبر؛ پادژ ندارد، فقط جنسیت/تعداد (рад، должен، нужен).","Adjectif court : seulement attribut ; pas de cas, seulement genre/nombre (рад, должен, нужен).","صفة قصيرة: خبر فقط؛ بلا حالات، الجنس والعدد فقط (рад، должен، нужен).","Tính từ ngắn: chỉ làm vị ngữ; không có cách, chỉ giống/số (рад, должен, нужен).","短尾形容词：只作谓语；没有格，只有性/数（рад、должен、нужен）。","Adjetivo curto: só predicado; sem caso, apenas gênero/número (рад, должен, нужен).","Adjetivo corto: solo predicado; sin caso, solo género/número (рад, должен, нужен).","Kısa sıfat: yalnızca yüklem olur; hâl almaz, sadece cinsiyet/sayı (рад, должен, нужен)."],
+plt:["Plural-only noun (деньги, каникулы): always plural, even when it means one thing.","اسمِ فقط‌جمع (деньги، каникулы): همیشه جمع است، حتی وقتی یک چیز را می‌رساند.","Nom toujours pluriel (деньги, каникулы) : jamais au singulier.","اسم جمع دائمًا (деньги، каникулы): لا يأتي مفردًا.","Danh từ chỉ có số nhiều (деньги, каникулы): luôn ở số nhiều.","只有复数的名词（деньги、каникулы）：永远用复数。","Substantivo só plural (деньги, каникулы): sempre no plural.","Sustantivo solo plural (деньги, каникулы): siempre en plural.","Hep çoğul isim (деньги, каникулы): daima çoğuldur."],
+date:["Dates use the genitive: «первого января» (the first OF January).","تاریخ‌ها اضافه‌ای می‌شوند: «первого января» (اولِ ژانویه).","Les dates se mettent au génitif : « первого января ».","التواريخ تأتي مجرورة: «первого января» (الأول من يناير).","Ngày tháng dùng cách 2: «первого января» (mùng một tháng Giêng).","日期用属格：“первого января”（1月1日）。","Datas usam o genitivo: «первого января» (o primeiro de janeiro).","Las fechas usan el genitivo: «первого января» (el primero de enero).","Tarihlerde tamlayan hâli kullanılır: «первого января»."],
+ego:["«Его / её / их» (his / her / their) never change — they don’t agree with the noun.","«его / её / их» (او / آن‌ها) هیچ‌وقت تغییر نمی‌کنند — با اسم هماهنگ نمی‌شوند.","« его / её / их » (son / leur) ne changent jamais — ils ne s’accordent pas.","«его / её / их» لا تتغير — ولا تطابق الاسم.","«его / её / их» (của anh ấy / cô ấy / họ) không đổi — không hợp với danh từ.","“его / её / их”（他的/她的/他们的）永不变化——不与名词一致。","«его / её / их» (dele / dela) nunca mudam — não concordam com o nome.","«его / её / их» (su) nunca cambian — no concuerdan con el nombre.","«его / её / их» (onun / onların) değişmez — isimle uyum sağlamaz."],
+ya:["Neuter nouns in -мя (время, имя) add -ен- in most cases: времени, временем.","اسم‌های خنثی با -мя (время، имя) در بیشتر حالت‌ها -ен- می‌گیرند: времени، временем.","Les neutres en -мя (время, имя) ajoutent -ен- : времени, временем.","الأسماء المحايدة بـ -мя (время، имя) تزيد -ен-: времени، временем.","Danh từ giống trung đuôi -мя (время, имя) thêm -ен-: времени, временем.","以 -мя 结尾的中性名词（время、имя）多数格加 -ен-：времени、временем。","Neutros em -мя (время, имя) acrescentam -ен-: времени, временем.","Neutros en -мя (время, имя) añaden -ен-: времени, временем.","-мя ile biten nötr isimler (время, имя) çoğu hâlde -ен- ekler: времени, временем."],
+frac:["Fractions: the numerator is a normal number, the denominator is feminine plural/ordinal: две трети.","کسرها: صورت عدد معمولی است و مخرج ترتیبی/مؤنث: две трети.","Fractions : le numérateur est un nombre normal, le dénominateur est ordinal/féminin : две трети.","الكسور: البسط عدد عادي والمقام ترتيبي مؤنث: две трети.","Phân số: tử số là số thường, mẫu số là số thứ tự giống cái: две трети.","分数：分子用基数，分母用阴性序数：две трети。","Frações: numerador normal, denominador ordinal feminino: две трети.","Fracciones: el numerador es normal, el denominador ordinal femenino: две трети.","Kesirler: pay normal sayıdır, payda dişil sıra sayısıdır: две трети."],
+ppl:["Irregular plural in -ья: стул → стулья, брат → братья, друг → друзья.","جمع بی‌قاعده با -ья: стул → стулья، брат → братья، друг → друзья.","Pluriel irrégulier en -ья : стул → стулья, брат → братья.","جمع شاذ بـ -ья: стул → стулья، брат → братья، друг → друзья.","Số nhiều bất quy tắc -ья: стул → стулья, брат → братья.","不规则复数 -ья：стул → стулья，брат → братья。","Plural irregular em -ья: стул → стулья, брат → братья.","Plural irregular en -ья: стул → стулья, брат → братья.","-ья ile düzensiz çoğul: стул → стулья, брат → братья."],
+impers:["Impersonal verb: «прийтись» = to have to; the person is in the DATIVE: мне пришлось = I had to.","فعل بی‌شخص: «прийтись» = مجبور شدن؛ شخص در داتیو می‌آید: мне пришлось = مجبور شدم.","Verbe impersonnel : « прийтись » = devoir ; la personne est au DATIF : мне пришлось = j’ai dû.","فعل لا شخصي: «прийтись» = اضطرّ؛ يأتي الشخص في حالة الإعطاء: мне пришлось = اضطررت.","Động từ vô nhân xưng: «прийтись» = đành phải; người ở CÁCH 3: мне пришлось = tôi đã phải.","无人称动词：“прийтись”=不得不；人用与格：мне пришлось=我不得不。","Verbo impessoal: «прийтись» = ter de; a pessoa vai no DATIVO: мне пришлось = tive de.","Verbo impersonal: «прийтись» = tener que; la persona va en DATIVO: мне пришлось = tuve que.","Kişisiz fiil: «прийтись» = zorunda kalmak; kişi yönelme hâlinde: мне пришлось = zorunda kaldım."],
+gengov:["Some verbs (ждать, желать, бояться) take the GENITIVE for abstract things: жду ответа.","بعضی فعل‌ها (ждать، желать، бояться) برای چیزهای انتزاعی اضافه‌ای می‌خواهند: жду ответа.","Certains verbes (ждать, желать, бояться) veulent le GÉNITIF pour l’abstrait : жду ответа.","بعض الأفعال (ждать، желать، бояться) تطلب المجرور مع المعنويات: жду ответа.","Một số động từ (ждать, желать, бояться) đòi CÁCH 2 với vật trừu tượng: жду ответа.","有些动词（ждать、желать、бояться）后接抽象事物时用属格：жду ответа。","Alguns verbos (ждать, желать, бояться) pedem GENITIVO com coisas abstratas: жду ответа.","Algunos verbos (ждать, желать, бояться) piden GENITIVO con cosas abstractas: жду ответа.","Bazı fiiller (ждать, желать, бояться) soyut şeylerde TAMLAYAN ister: жду ответа."],
+num:["Numerals 1 and 2 have gender: один / одна / одно, два / две.","اعداد ۱ و ۲ جنسیت دارند: один / одна / одно، два / две.","Les numéraux 1 et 2 ont un genre : один / одна / одно, два / две.","العددان 1 و2 لهما جنس: один / одна / одно، два / две.","Số 1 và 2 có giống: один / одна / одно, два / две.","数词1和2有性：один / одна / одно，два / две。","Os numerais 1 e 2 têm gênero: один / одна / одно, два / две.","Los numerales 1 y 2 tienen género: один / одна / одно, два / две.","1 ve 2 sayılarının cinsiyeti vardır: один / одна / одно, два / две."]
+};
+/* preposition meanings (key = lemma, or lemma+case for с, за, по) */
+const WQ_PM={
+"в":["in / into","در / به داخل","dans / vers l’intérieur","في / إلى داخل","trong / vào","在……里 / 进入","em / para dentro","en / hacia dentro","içinde / içine"],
+"на":["on / onto","روی / به روی","sur / vers le dessus","على / إلى فوق","trên / lên","在……上 / 到……上","em cima de / para cima de","sobre / hacia","üstünde / üstüne"],
+"о":["about","درباره‌ی","au sujet de","عن / حول","về","关于","sobre","sobre","hakkında"],
+"от":["from (away from)","از (دور از)","de (loin de)","من (بعيدًا عن)","từ (rời xa)","从（远离）","de (afastando-se de)","de (alejándose de)","-den (uzaklaşma)"],
+"у":["at / by (someone’s place); «to have»","نزدِ؛ «داشتن»","chez ; « avoir »","عند ؛ «يملك»","ở chỗ; «có»","在……那里；“拥有”","junto de; «ter»","junto a; «tener»","yanında; «sahip olmak»"],
+"к":["toward / to (a person or place)","به سوی / نزدِ","vers / chez","نحو / إلى","đến / về phía","朝向 / 到……那里","em direção a / para junto de","hacia / a casa de","-e doğru / -in yanına"],
+"по3":["along / by / on (a schedule)","در امتداد / بر اساس","le long de / selon","على امتداد / وفق","dọc theo / theo","沿着 / 按照","ao longo de / segundo","a lo largo de / según","boyunca / göre"],
+"по4":["each / up to (distributive)","هر کدام / تا (توزیعی)","chacun / jusqu’à","لكل واحد / حتى","mỗi (phân phối) / đến","每（分配）/ 到","cada / até","cada uno / hasta","her biri / kadar"],
+"до":["until / up to","تا / تا قبلِ","jusqu’à / avant","حتى / قبل","đến / cho đến","直到 / 到……为止","até / antes de","hasta / antes de","-e kadar"],
+"из":["out of / from (a place or group)","از (درون)","de / hors de","من (داخل)","từ trong / ra khỏi","从……里出来 / 来自","de dentro de / de","de dentro de / de","-den (içinden)"],
+"без":["without","بدون","sans","بدون","không có","没有","sem","sin","-siz"],
+"с2":["from / off (down from)","از / از روی","de / depuis le haut de","من / عن (من فوق)","từ / xuống từ","从……上下来 / 从","de / de cima de","de / desde encima de","-den (üstünden)"],
+"с5":["with (together)","با (همراه)","avec","مع","cùng với","和 / 与……一起","com (junto)","con (junto a)","ile (birlikte)"],
+"после":["after","بعد از","après","بعد","sau","在……之后","depois de","después de","-den sonra"],
+"над":["above / over","بالای","au-dessus de","فوق","phía trên","在……上方","acima de","encima de","üzerinde (havada)"],
+"за4":["for / in exchange for / behind (direction)","برای / در ازای / پشتِ (جهت)","pour / en échange de / derrière (direction)","مقابل / لأجل / خلف (اتجاه)","cho / đổi lấy / ra phía sau","为了 / 换取 / 到……后面","por / em troca de / para trás","por / a cambio de / detrás (dirección)","için / karşılığında / arkasına"],
+"за5":["behind / beyond (location)","پشت / آن‌سوی (مکان)","derrière / au-delà (lieu)","خلف / وراء (مكان)","phía sau / bên kia (vị trí)","在……后面 / 在……之外","atrás de / além de","detrás de / más allá de","arkasında / ötesinde"],
+"для":["for (the benefit of)","برای (به نفع)","pour (au profit de)","لـ (لمصلحة)","dành cho","为了 / 给……用","para (em benefício de)","para (en beneficio de)","için (yararına)"],
+"через":["through / in (time from now)","از میان / بعد از (زمان از اکنون)","à travers / dans (délai)","عبر / بعد (مدة من الآن)","qua / sau (thời gian từ bây giờ)","穿过 / 再过（多久）","através de / daqui a","a través de / dentro de","içinden / sonra (şimdiden itibaren)"],
+"про":["about (informal)","درباره‌ی (غیررسمی)","à propos de (familier)","عن (غير رسمي)","về (thân mật)","关于（口语）","sobre (informal)","sobre (informal)","hakkında (günlük)"],
+"под":["under","زیر","sous","تحت","dưới","在……下面","debaixo de","debajo de","altında"],
+"перед":["in front of / before","جلوی / پیش از","devant / avant","أمام / قبل","trước","在……前面","na frente de / antes de","delante de / antes de","önünde / önce"],
+"около":["near / about","نزدیکِ / حدود","près de / environ","قرب / نحو","gần / khoảng","在……附近 / 大约","perto de / cerca de","cerca de / alrededor de","yakınında / yaklaşık"],
+"напротив":["opposite","روبه‌روی","en face de","مقابل","đối diện","在……对面","em frente a","enfrente de","karşısında"],
+"вокруг":["around","دورِ","autour de","حول","xung quanh","围绕","em volta de","alrededor de","etrafında"],
+"возле":["next to / by","کنارِ","à côté de","بجانب","bên cạnh","在……旁边","ao lado de","junto a","yanında"]
+};
+
+/* ===== Word-form helper: tap a word → «?» → why this form ===== */
+(function(){
+const TOK=/[А-Яа-яЁё]+(?:-[А-Яа-яЁё]+)*/g;
+const $b=document.body;
+let bub=null,card=null,cur=null;
+const L=()=>{try{return IX[lang]}catch(e){return 0}};
+const T=a=>a?(a[L()]||a[0]):"";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const RTL=()=>lang==="fa"||lang==="ar";
+const caseName=c=>{try{const a=N[lang]||N.en;return (a&&a[c-1])||N.en[c-1]}catch(e){return "#"+c}};
+const caseCol=c=>{try{return COL[c-1]}catch(e){return "#7c3aed"}};
+const caseQ=c=>{try{return QW[c-1].split("·")[0].trim()}catch(e){return ""}};
+
+/* ---- tag parsing ---- */
+function parse(w,tag){
+ if(tag==="-")return null;
+ const sl=tag.lastIndexOf("/");
+ const lemma=tag.slice(0,sl),rest=tag.slice(sl+1);
+ const m=rest.match(/^[^!=]*/)[0];
+ const ov=[],rl=[];
+ (rest.slice(m.length).match(/[!=][A-Za-z]+/g)||[]).forEach(x=>{x[0]==="!"?ov.push(x.slice(1)):rl.push(x.slice(1))});
+ const o={w,lemma,code:m,ov,role:rl[0]||"",pos:m[0],c:0,g:"",n:"",form:"",asp:""};
+ if(m.slice(0,2)==="Pr"){o.pos="P";o.c=+m[2]}
+ else if(o.pos==="V"){o.asp=m[1];o.form=m.split(".")[1]||""}
+ else if(o.pos==="A"&&m[1]==="c"&&m.length===2){o.cmp=1}
+ else if(o.pos==="A"&&m.slice(0,3)==="As."){o.short=1;o.g=m[3];o.n=m[3]==="p"?"p":"s"}
+ else if("NARM".indexOf(o.pos)>=0){o.g=m[1]==="x"?"":m[1];o.n=m[2];o.c=+m[3]}
+ if(o.pos==="N"&&o.n==="p")o.g=o.g;/* lemma gender kept */
+ return o;
+}
+function getToks(el){
+ if(el._wqp)return el._wqp;
+ const raw=WQ_SENT[el.getAttribute("data-wq-k")];
+ const tags=raw.split(" ");
+ const words=(el.textContent.match(TOK)||[]);
+ return el._wqp=words.map((w,i)=>parse(w,tags[i]||"-"));
+}
+/* ---- explanation ---- */
+function prevPrep(ts,k){
+ for(let j=k-1;j>=0&&j>=k-5;j--){
+  const t=ts[j];if(!t)continue;
+  if(t.pos==="P")return t;
+  if("AMR".indexOf(t.pos)<0&&!(t.pos==="N"&&false))return null;
+ }
+ return null;
+}
+function headNoun(ts,k){
+ for(let j=k+1;j<ts.length&&j<=k+3;j++){const t=ts[j];if(t&&t.pos==="N")return t}
+ for(let j=k-1;j>=0&&j>=k-3;j--){const t=ts[j];if(t&&t.pos==="N")return t}
+ return null;
+}
+const fill=(s,o)=>s.replace(/\{(\w)\}/g,(_,k)=>o[k]==null?"":o[k]);
+function pmean(p){
+ const l=p.w.toLowerCase();
+ const a=WQ_PM[l+p.c]||WQ_PM[l];
+ return a?T(a):"";
+}
+function explain(ts,k){
+ const t=ts[k];const r={t,facts:[],note:[],chip:[]};
+ const ov=t.ov;
+ let prep=(t.pos==="N"||t.pos==="A"||t.pos==="R"||t.pos==="M")?prevPrep(ts,k):null;
+ if(prep&&prep.c!==t.c)prep=null;
+ r.col=t.c?caseCol(t.c):"#7c3aed";
+ const R=(key,o)=>fill(T(WQ_ROLE[key]),o||{});
+ /* dictionary form */
+ r.lemma=t.lemma;
+ r.isVerb=t.pos==="V";
+ r.same=t.lemma.toLowerCase()===t.w.toLowerCase();
+ /* role */
+ let role="";
+ const rc=t.role;
+ const map={pred:"pred",thing:"thing",exp:"exp",quant:"quant",io:"io",time:"time",ravno:"ravno",predins:"predins",neg:"neg","do":"do",tool:"tool",possr:"possr",comp:"comp"};
+ if(t.pos==="V"){role=R(t.form==="inf"?"infr":"verb")}
+ else if(t.pos==="P"){role=R("prepw",{c:caseName(t.c)+" ("+t.c+")"})}
+ else if("DCTI".indexOf(t.pos)>=0){role=R("invar")}
+ else if(t.pos==="A"&&t.cmp){role=R("cmpadj")}
+ else if(t.pos==="A"&&t.short){role=R("shortadj")}
+ else if(rc&&map[rc]){
+  role=(rc==="do"&&t.c&&t.c!==4)?R("doGen"):R(map[rc]);
+ }
+ else if(t.pos==="A"&&ov.indexOf("adjn")<0){
+  const h=headNoun(ts,k);
+  role=h?R("agree",{n:h.w}):R("agreeNo");
+ }
+ else if(t.pos==="M"&&!prep){role=R("numr")}
+ else if(prep){
+  const pl=prep.w.toLowerCase();
+  if((pl==="в"||pl==="на")&&t.c===4)role=R("preDir",{p:prep.w});
+  else if((pl==="в"||pl==="на")&&t.c===6)role=R("preLoc",{p:prep.w});
+  else role=R("pre",{p:prep.w,c:caseName(t.c)});
+  r.pm=pmean(prep);r.pw=prep.w;
+ }
+ else if(t.c){role=R(["","subj","gen","dat","acc","ins","prp"][t.c])}
+ r.role=role;
+ /* chips */
+ const U=WQ_UI;
+ let posKey=t.pos;
+ r.pos=T(WQ_POS[posKey]);
+ /* facts */
+ if(t.c&&t.pos!=="P"){r.facts.push(["cas",`<b class="wq-num" style="background:${r.col}">${t.c}</b> ${esc(caseName(t.c))} <i>${esc(caseQ(t.c))}</i>`])}
+ if(t.pos==="P"){r.facts.push(["cas",`<b class="wq-num" style="background:${r.col}">${t.c}</b> ${esc(caseName(t.c))} <i>${esc(caseQ(t.c))}</i>`])}
+ if(t.pos==="N"||t.pos==="A"||t.pos==="R"||t.pos==="M"){
+  if(t.g&&t.g!=="p"&&WQ_G[t.g]){
+   const ic=t.g==="m"?"♂":t.g==="f"?"♀":"⚪";
+   r.facts.push(["gen",`<span class="wq-ic">${ic}</span> ${esc(T(WQ_G[t.g]))}`+(t.pos==="N"&&t.n==="p"?` <small>(${esc(T(WQ_UI.lemma))})</small>`:"")])
+  }
+  if(t.n&&WQ_NUM[t.n])r.facts.push(["num",`<span class="wq-ic">${t.n==="s"?"①":"⋯"}</span> ${esc(T(WQ_NUM[t.n]))}`]);
+ }
+ if(t.pos==="A"&&t.short&&t.g&&t.g!=="p"&&WQ_G[t.g])r.facts.push(["gen",`<span class="wq-ic">${t.g==="m"?"♂":t.g==="f"?"♀":"⚪"}</span> ${esc(T(WQ_G[t.g]))}`]);
+ if(t.pos==="V"){
+  const f=t.form;
+  let tn="";
+  if(f==="inf")tn="inf";else if(f[0]==="p"&&f[1]==="r")tn="pr";else if(f[0]==="p"&&f[1]==="a")tn="pa";else if(f[0]==="f")tn="fu";else if(f[0]==="i")tn="im";
+  if(tn)r.facts.push(["tns",`<span class="wq-ic">⏱</span> ${esc(T(WQ_TNS[tn]))}`]);
+  if(tn==="pr"||tn==="fu"||tn==="im"){
+   const pn=+f[2]||+f[f.length-2];
+   const nn=f[f.length-1];
+   if(tn==="im")r.facts.push(["per",`<span class="wq-ic">👤</span> ${esc(T(WQ_PER[2]))}`]);
+   else r.facts.push(["per",`<span class="wq-ic">👤</span> ${esc(T(WQ_PER[+f[2]]||WQ_PER[3]))}`]);
+   if(WQ_NUM[nn])r.facts.push(["num",`<span class="wq-ic">${nn==="s"?"①":"⋯"}</span> ${esc(T(WQ_NUM[nn]))}`]);
+  }else if(tn==="pa"){
+   const g=f[2];
+   if(g==="p")r.facts.push(["num",`<span class="wq-ic">⋯</span> ${esc(T(WQ_NUM.p))}`]);
+   else if(WQ_G[g])r.facts.push(["gen",`<span class="wq-ic">${g==="m"?"♂":g==="f"?"♀":"⚪"}</span> ${esc(T(WQ_G[g]))} · ${esc(T(WQ_NUM.s))}`]);
+  }
+  if(t.asp&&WQ_ASP[t.asp])r.facts.push(["asp",`<span class="wq-ic">${t.asp==="i"?"🔄":"✅"}</span> ${esc(T(WQ_ASP[t.asp]))}`]);
+ }
+ /* notes */
+ const nk=[];
+ ov.forEach(o=>{if(WQ_NOTE[o])nk.push(o)});
+ if(t.pos==="A"&&t.short&&nk.indexOf("short")<0)nk.push("short");
+ if(t.pos==="M"&&ov.indexOf("num")>=0&&nk.indexOf("num")<0)nk.push("num");
+ /* quant role gets a gq explanation if none given */
+ r.notes=nk.map(k=>T(WQ_NOTE[k]));
+ return r;
+}
+/* ---- UI ---- */
+function closeAll(){
+ if(bub){bub.remove();bub=null}
+ if(card){card.remove();card=null}
+ if(cur){cur.classList.remove("on");cur=null}
+}
+function docRect(el){const r=el.getBoundingClientRect();return{l:r.left+scrollX,t:r.top+scrollY,w:r.width,h:r.height,cx:r.left+scrollX+r.width/2}}
+function showBubble(span,col){
+ closeAll();
+ cur=span;span.classList.add("on");span.style.setProperty("--wc",col);
+ const r=docRect(span);
+ bub=document.createElement("button");
+ bub.className="wq-bub";bub.type="button";bub.textContent="?";
+ bub.setAttribute("aria-label",T(WQ_UI.why));bub.title=T(WQ_UI.why);
+ bub.style.setProperty("--wc",col);
+ bub.style.left=Math.max(6+scrollX,Math.min(r.cx-18,scrollX+innerWidth-42))+"px";
+ bub.style.top=(r.t-44)+"px";
+ $b.appendChild(bub);
+}
+function open(){
+ if(!cur)return;
+ const el=cur.closest(".ru");const ts=getToks(el);
+ const k=+cur.getAttribute("data-wi");
+ const x=explain(ts,k);const t=x.t;
+ const U=WQ_UI;
+ const rtl=RTL();
+ let h=`<div class="wq-head" style="--wc:${x.col}"><span class="wq-w ru" dir="ltr">${esc(t.w)}</span><span class="wq-pos">${esc(x.pos)}</span>
+ <button class="wq-x" type="button" data-wq-close aria-label="${esc(T(U.close))}">✕</button></div><div class="wq-body" dir="${rtl?"rtl":"ltr"}">`;
+ /* dictionary form */
+ if(t.pos==="N"||t.pos==="A"||t.pos==="R"||t.pos==="V"||t.pos==="M"){
+  h+=`<div class="wq-lem"><span class="wq-l">${esc(T(x.isVerb?U.inf:U.lemma))}</span>`;
+  h+=x.same?`<span class="wq-same">${esc(T(U.same))}</span>`:`<span class="wq-arrow">${rtl?"←":"→"}</span><b class="ru wq-lw" dir="ltr">${esc(x.lemma)}</b><button class="wq-sp" type="button" data-wq-say="${esc(x.lemma)}" aria-label="${esc(T(U.listen))}">🔊</button>`;
+  h+=`</div>`;
+ }
+ h+=`<div class="wq-facts">`;
+ x.facts.forEach(f=>{h+=`<div class="wq-f"><span class="wq-fl">${esc(T(U[f[0]]))}</span><span class="wq-fv">${f[1]}</span></div>`});
+ h+=`</div>`;
+ h+=`<div class="wq-role"><span class="wq-fl">${esc(T(U.role))}</span><div>${esc(x.role)}</div>`;
+ if(x.pm)h+=`<div class="wq-pm"><b class="ru" dir="ltr">${esc(x.pw)}</b> = ${esc(x.pm)}</div>`;
+ h+=`</div>`;
+ if(x.notes.length)h+=`<div class="wq-note"><span class="wq-bulb">💡</span><div><b>${esc(T(U.note))}</b>${x.notes.map(n=>`<p>${esc(n)}</p>`).join("")}</div></div>`;
+ h+=`</div><i class="wq-tail"></i>`;
+ if(bub){bub.remove();bub=null}
+ card=document.createElement("div");card.className="wq-card";card.style.setProperty("--wc",x.col);card.innerHTML=h;
+ card.style.visibility="hidden";$b.appendChild(card);
+ const r=docRect(cur);const cw=card.offsetWidth,ch=card.offsetHeight;
+ const vw=document.documentElement.clientWidth;
+ let left=Math.max(scrollX+8,Math.min(r.cx-cw/2,scrollX+vw-cw-8));
+ let top=r.t-ch-14;let below=false;
+ if(top<scrollY+6&&scrollY>0){window.scrollTo({top:Math.max(0,scrollY-(scrollY+6-top)),behavior:"instant"})}
+ if(top<scrollY+6){top=r.t+r.h+14;below=true}
+ card.style.left=left+"px";card.style.top=top+"px";
+ const tail=card.querySelector(".wq-tail");
+ tail.style.left=Math.max(18,Math.min(cw-18,r.cx-left))+"px";
+ card.classList.toggle("below",below);
+ card.style.visibility="";
+ /* keep the card visible if it ended above the viewport */
+ const ct=top-scrollY;
+ if(ct+ch>innerHeight-4){window.scrollTo({top:Math.max(0,top+ch-innerHeight+14),behavior:"smooth"})}
+ card.querySelector("[data-wq-close]").focus({preventScroll:true});
+}
+/* ---- wrapping ---- */
+function skip(el){
+ const c=el.closest(".card");
+ if(c&&c.querySelector(".opt,.st-q,.st-opt,input[type=text],input:not([type])"))return true;
+ return false;
+}
+function wrapEl(el){
+ el.setAttribute("data-wq","1");
+ if(el.children.length)return;
+ const key=el.textContent.trim();
+ const raw=WQ_SENT[key];if(!raw)return;
+ if(skip(el))return;
+ const tags=raw.split(" ");
+ const txt=el.textContent;let i=0,last=0,h="";
+ TOK.lastIndex=0;let m;
+ while((m=TOK.exec(txt))){
+  h+=esc(txt.slice(last,m.index));
+  const tg=tags[i];
+  if(tg&&tg!=="-")h+=`<span class="wd" data-wi="${i}" title="${esc(T(WQ_UI.hint))}">${esc(m[0])}</span>`;
+  else h+=esc(m[0]);
+  last=m.index+m[0].length;i++;
+ }
+ h+=esc(txt.slice(last));
+ el.setAttribute("data-wq-k",key);
+ el.innerHTML=h;
+}
+let pend=0;
+function sweep(){
+ pend=0;
+ document.querySelectorAll("#m .ru:not([data-wq])").forEach(wrapEl);
+}
+const mm=document.getElementById("m");
+if(mm){
+ new MutationObserver(()=>{if(!pend){pend=1;requestAnimationFrame(sweep)}}).observe(mm,{childList:true,subtree:true});
+ sweep();
+}
+/* ---- events (capture phase so story-line playback is not triggered) ---- */
+document.addEventListener("click",e=>{
+ const tg=e.target;if(!tg||!tg.closest)return;
+ const sp=tg.closest("[data-wq-say]");
+ if(sp&&card&&card.contains(sp)){e.stopPropagation();try{say(sp.getAttribute("data-wq-say"))}catch(_){}return}
+ if(tg.closest("[data-wq-close]")){e.stopPropagation();closeAll();return}
+ if(tg.closest(".wq-bub")){e.stopPropagation();e.preventDefault();open();return}
+ if(tg.closest(".wq-card"))return;
+ const w=tg.closest(".wd");
+ if(w){
+  e.stopImmediatePropagation();e.preventDefault();
+  const el=w.closest(".ru");if(!el||!el.getAttribute("data-wq-k")){return}
+  const ts=getToks(el),k=+w.getAttribute("data-wi");
+  if(cur===w&&(bub||card)){closeAll();return}
+  const t=ts[k];
+  try{say(t.w)}catch(_){}
+  showBubble(w,t.c?caseCol(t.c):"#7c3aed");
+  return;
+ }
+ closeAll();
+},true);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+window.addEventListener("resize",closeAll);
+/* close when the page/tab/language changes */
+document.addEventListener("change",e=>{if(e.target&&e.target.id==="lg")closeAll()});
 })();
 </script>
 </body></html>
